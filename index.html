@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/style.css">
+
+  
+</head>
+<body>
+  <section class="product">
+    <div class="product__img">
+      <img src="/images/macbook.jpg" alt="macbookダミー画像">
+    </div>
+    <div class="product__wrap">
+      <h1 class="product__ttl">商品をカスタマイズする</h1>
+      <p class="product__text border__A">商品説明が入ります商品説明が入ります商品説明が入ります商品説明が入ります商品説明が入ります商品説明が入ります商品説明が入ります商品説明が入ります商品説明が入ります商品説明が入ります</p>
+      <section class="memory">
+        <h2>メモリ</h2>
+        <div class="memory__01">
+          <input type="radio" id="8gb" name="memory" value="8gb" data-price="0">
+          <label for="8gb">8GBユニファイドメモリ<span class="plusprice">+ 0(税込)</span></label>
+        </div>
+        <div class="memory__02">
+          <input type="radio" id="16gb" name="memory" value="16gb" data-price="5000">
+          <label for="16gb">16GBユニファイドメモリ<span class="plusprice">+ 5000(税込)</span></label>
+        </div>
+        <div class="memory__03">
+          <input type="radio" id="32gb" name="memory" value="32gb" data-price="10000">
+          <label for="32gb">32GBユニファイドメモリ<span class="plusprice">+ 10000(税込)</label>
+        </div>
+      </section>
+      <section class="storage">
+        <h2>ストレージ</h2>
+        <div class="storage__01">
+          <input type="radio" id="512gb" name="storage" value="512gb" data-price="0">
+          <label for="512gb">512GB SSDストレージ</label>
+        </div>
+        <div class="storage__02">
+          <input type="radio" id="1tb" name="storage" value="1tb" data-price="5000">
+          <label for="1tb">1TB SSDストレージ<span class="plusprice">+ 5000(税込)</label>
+        </div>
+        <div class="storage__03">
+          <input type="radio" id="2tb" name="storage" value="2tb" data-price="10000">
+          <label for="2tb">2TB SSDストレージ<span class="plusprice">+ 10000(税込)</label>
+        </div>
+      </section>
+      <section class="keybord">
+        <h2>キーボード言語</h2>
+        <select name="keybord" id="keybord">
+          <option value="" data-price="0">日本語</option>
+          <option value="" data-price="1000">英語<span class="plusprice">+ 1000(税込)</option>
+          <option value="" data-price="500">中国語<span class="plusprice">+ 500(税込)</option>
+        </select>
+      </section>
+      <section class="cutpro">
+        <h2>Final Cut Pro</h2>
+        <div class="cutpro__wrap">
+          <div class="cutpro__01">
+            <input type="radio" id="none" name="cutpro" value="none" data-price="0">
+            <label for="none">なし</label>
+          </div>
+          <div class="cutpro__02">
+            <input type="radio" id="cutpro" name="cutpro" value="cutpro" data-price="30000">
+            <label for="cutpro">Final Cut Pro<span class="plusprice">+ 30000(税込)</label>
+          </div>
+
+        </div>
+      </section>
+    </div>
+    <div id="total-price" class="total">
+      <p>合計　　円（税込）</p>
+      <div class="order-btn">
+        <a href="">確認画面に進む</a>
+      </div>
+    </div>
+  </section>
+  <script src="./js/index.js"></script>
+</body>
+</html>
