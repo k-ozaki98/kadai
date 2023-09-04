@@ -1,51 +1,101 @@
 function calculateTotalPrice() {
   let totalPrice = 100000;
-  let selectMemory = document.querySelector('input[name="memory"]:checked');
-  let selectStorage = document.querySelector('input[name="storage"]:checked');
-  let selectKeybord = document.getElementById('keybord');
+  let selectOs = document.querySelector('input[name="os"]:checked');
+  let selectOffice = document.querySelector('input[name="office"]:checked');
+  let selectSecurity = document.querySelector('input[name="security"]:checked');
+  let selectCpu = document.querySelector('input[name="cpu"]:checked');
+  let selectFan = document.querySelector('input[name="fan"]:checked');
+  let selectGrease = document.querySelector('input[name="grease"]:checked');
   let selectCutpro = document.querySelector('input[name="cutpro"]:checked');
   
-  // メモリ選択
-  if (selectMemory) {
-    let price = parseInt(selectMemory.dataset.price);
+  // os選択
+  if (selectOs) {
+    let price = parseInt(selectOs.dataset.price);
     totalPrice += price;
   }
   
-  // ストレージ選択
-  if (selectStorage) {
-    let price = parseInt(selectStorage.dataset.price);
+  // オフィスソフト選択
+  if (selectOffice) {
+    let price = parseInt(selectOffice.dataset.price);
     totalPrice += price;
   }
   
-  // キーボード選択
-  if (selectKeybord) {
-    let selectOption = selectKeybord.options[selectKeybord.selectedIndex];
-    let price = parseInt(selectOption.dataset.price);
+  // セキュリティソフト選択
+  if (selectSecurity) {
+    let price = parseInt(selectSecurity.dataset.price);
+    totalPrice += price;
+  }
+
+  // cpu選択
+  if (selectCpu) {
+    let price = parseInt(selectCpu.dataset.price);
     totalPrice += price;
   }
   
+  // cpuファン選択
+  if (selectFan) {
+    let price = parseInt(selectFan.dataset.price);
+    totalPrice += price;
+  }
+  // cpuグリス選択
+  if (selectGrease) {
+    let price = parseInt(selectGrease.dataset.price);
+    totalPrice += price;
+  }
+
   // カットプロ選択
   if (selectCutpro) {
     let price = parseInt(selectCutpro.dataset.price);
     totalPrice += price;
   }
   
-  document.querySelector('.total p').textContent = `合計: ${totalPrice}円(税込)`;
+  document.querySelector('.total p span').textContent = `${totalPrice}円`;
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+  const tabs = document.getElementsByClassName('product__item');
+  for (let i = 0; i < tabs.length; i++) {
+    tabs[i].addEventListener('click', tabSwich, false);
+  }
 
-let memoryOptions = document.querySelectorAll('input[name="memory"]');
-memoryOptions.forEach(function(option) {
+  function tabSwich() {
+    document.getElementsByClassName('is-active')[0].classList.remove('is-active');
+    this.classList.add('is-active');
+
+    document.getElementsByClassName('is-show')[0].classList.remove('is-show');
+    const arrayTabs = Array.prototype.slice.call(tabs);
+    const index = arrayTabs.indexOf(this);
+    document.getElementsByClassName('product')[index].classList.add('is-show');
+  };
+}, false)
+
+let osOptions = document.querySelectorAll('input[name="os"]');
+osOptions.forEach(function(option) {
   option.addEventListener('change', calculateTotalPrice);
 });
 
-let storageOptions = document.querySelectorAll('input[name="storage"]');
-storageOptions.forEach(function(option) {
+let officeOptions = document.querySelectorAll('input[name="office"]');
+officeOptions.forEach(function(option) {
   option.addEventListener('change', calculateTotalPrice);
 });
 
-let keybordOptions = document.querySelectorAll('select[name="keybord"]');
-keybordOptions.forEach(function(option) {
+let securityOptions = document.querySelectorAll('input[name="security"]');
+securityOptions.forEach(function(option) {
+  option.addEventListener('change', calculateTotalPrice);
+});
+
+let cpuOptions = document.querySelectorAll('input[name="cpu"]');
+cpuOptions.forEach(function(option) {
+  option.addEventListener('change', calculateTotalPrice);
+})
+
+let fanOptions = document.querySelectorAll('input[name="fan"]');
+fanOptions.forEach(function(option) {
+  option.addEventListener('change', calculateTotalPrice);
+})
+
+let greaseOptions = document.querySelectorAll('input[name="grease"]');
+greaseOptions.forEach(function(option) {
   option.addEventListener('change', calculateTotalPrice);
 })
 

@@ -1,82 +1,177 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="./css/style.css">
 
   
 </head>
 <body>
-  <section class="product">
-    <div class="product__img">
-      <img src="/images/macbook.jpg" alt="macbookダミー画像">
-    </div>
-    <div class="product__wrap">
-      <h1 class="product__ttl">商品をカスタマイズする</h1>
-      <p class="product__text border__A">商品説明が入ります商品説明が入ります商品説明が入ります商品説明が入ります商品説明が入ります商品説明が入ります商品説明が入ります商品説明が入ります商品説明が入ります商品説明が入ります</p>
-      <section class="memory">
-        <h2>メモリ</h2>
-        <div class="memory__01">
-          <input type="radio" id="8gb" name="memory" value="8gb" data-price="0">
-          <label for="8gb">8GBユニファイドメモリ<span class="plusprice">+ 0(税込)</span></label>
-        </div>
-        <div class="memory__02">
-          <input type="radio" id="16gb" name="memory" value="16gb" data-price="5000">
-          <label for="16gb">16GBユニファイドメモリ<span class="plusprice">+ 5000(税込)</span></label>
-        </div>
-        <div class="memory__03">
-          <input type="radio" id="32gb" name="memory" value="32gb" data-price="10000">
-          <label for="32gb">32GBユニファイドメモリ<span class="plusprice">+ 10000(税込)</label>
-        </div>
-      </section>
-      <section class="storage">
-        <h2>ストレージ</h2>
-        <div class="storage__01">
-          <input type="radio" id="512gb" name="storage" value="512gb" data-price="0">
-          <label for="512gb">512GB SSDストレージ</label>
-        </div>
-        <div class="storage__02">
-          <input type="radio" id="1tb" name="storage" value="1tb" data-price="5000">
-          <label for="1tb">1TB SSDストレージ<span class="plusprice">+ 5000(税込)</label>
-        </div>
-        <div class="storage__03">
-          <input type="radio" id="2tb" name="storage" value="2tb" data-price="10000">
-          <label for="2tb">2TB SSDストレージ<span class="plusprice">+ 10000(税込)</label>
-        </div>
-      </section>
-      <section class="keybord">
-        <h2>キーボード言語</h2>
-        <select name="keybord" id="keybord">
-          <option value="" data-price="0">日本語</option>
-          <option value="" data-price="1000">英語<span class="plusprice">+ 1000(税込)</option>
-          <option value="" data-price="500">中国語<span class="plusprice">+ 500(税込)</option>
-        </select>
-      </section>
-      <section class="cutpro">
-        <h2>Final Cut Pro</h2>
-        <div class="cutpro__wrap">
-          <div class="cutpro__01">
-            <input type="radio" id="none" name="cutpro" value="none" data-price="0">
-            <label for="none">なし</label>
+  <div class="l-inner">
+    <ul class="product__list">
+      <li class="product__item is-active">本体構成</li>
+      <li class="product__item">周辺機器</li>
+      <li class="product__item">サービス</li>
+      <li class="product__item">内容確認</li>
+    </ul>
+    <section class="product is-show">
+      <h2 class="product__ttl">本体構成</h2>
+      <div class="product__wrap">
+        <section class="os">
+          <h3>OS</h3>
+          <div class="os__01">
+            <input type="radio" id="8gb" name="os" value="8gb" data-price="0">
+            <label for="8gb">Windows 11 Home 64ビット<span class="plusprice">0円</span></label>
           </div>
-          <div class="cutpro__02">
-            <input type="radio" id="cutpro" name="cutpro" value="cutpro" data-price="30000">
-            <label for="cutpro">Final Cut Pro<span class="plusprice">+ 30000(税込)</label>
+          <div class="os__02">
+            <input type="radio" id="16gb" name="os" value="16gb" data-price="7000">
+            <label for="16gb">Windows 11 Pro 64ビット<span class="plusprice">+ 7000円</span></label>
           </div>
-
-        </div>
-      </section>
-    </div>
-    <div id="total-price" class="total">
-      <p>合計　　円（税込）</p>
-      <div class="order-btn">
-        <a href="">確認画面に進む</a>
+        </section>
+        <section class="office">
+          <h3>オフィスソフト</h3>
+          <div class="office__01">
+            <input type="radio" id="512gb" name="office" value="512gb" data-price="0">
+            <label for="512gb">Office なし</label>
+          </div>
+          <div class="office__02">
+            <input type="radio" id="1tb" name="office" value="1tb" data-price="22000">
+            <label for="1tb">Microsoft(R) Office Personal 2021 (Word/Excel/Outlook)<span class="plusprice">+ 22,000(税込)</label>
+          </div>
+          <div class="office__03">
+            <input type="radio" id="2tb" name="office" value="2tb" data-price="27500">
+            <label for="2tb">2Microsoft(R) Office Home and Business 2021 (Word/Excel/PowerPoint/Outlook) 《オススメ》<span class="plusprice">+ 27500(税込)</label>
+          </div>
+          <div class="office__04">
+            <input type="radio" id="profeddional" name="office" value="profeddional" data-price="53900">
+            <label for="profeddional">Microsoft(R) Office Professional 2021 (Word/Excel/PowerPoint/Outlook/Access/Publisher)<span class="plusprice">+ 53900(税込)</label>
+          </div>
+          <div class="office__05">
+            <input type="radio" id="kingsoft" name="office" value="kingsoft" data-price="3080">
+            <label for="kingsoft">KINGSOFT WPS Office 2 (ワープロ/表計算/プレゼンテーション)<span class="plusprice">+ 3080(税込)</label>
+          </div>
+        </section>
+        <section class="security">
+          <h3>セキュリティソフト</h3>
+          <div class="security__01">
+            <input type="radio" id="security01" name="security" value="security01" data-price="0">
+            <label for="security01">sノートンセキュリティ スタンダード30日版プリインストール【更新特典付】</label>
+          </div>
+          <div class="security__02">
+            <input type="radio" id="security02" name="security" value="security02" data-price="22000">
+            <label for="security02">ノートン360スタンダードプラス1 【1年版 自動更新】【プロダクトキー/チラシ同梱】<span class="plusprice">+ 22,000(税込)</label>
+          </div>
+          <div class="security__03">
+            <input type="radio" id="security03" name="security" value="security03" data-price="27500">
+            <label for="security03">ノートンセキュリティ スタンダード30日版プリインストール【更新特典付】
+              + ノートン ID アドバイザー【1年 バンドル版】<span class="plusprice">+ 27500(税込)</label>
+          </div>
+          <div class="security__04">
+            <input type="radio" id="security04" name="security" value="security04" data-price="53900">
+            <label for="security04">ノートン360スタンダードプラス1 【1年版 自動更新】【プロダクトキー/チラシ同梱】
+              + ノートン ID アドバイザー【1年 バンドル版】<span class="plusprice">+ 53900(税込)</label>
+          </div>
+        </section>
+        <section class="cpu">
+          <h3>CPU</h3>
+          <div class="cpu__01">
+            <input type="radio" id="coreF" name="cpu" value="coreF" data-price="0">
+            <label for="coreF">インテル Core i7-13700F (2.10GHz-5.20GHz/16コア/24スレッド)</label>
+          </div>
+          <div class="cpu__02">
+            <input type="radio" id="core" name="cpu" value="core" data-price="4900">
+            <label for="core">インテル Core i7-13700 (2.10GHz-5.20GHz/16コア/24スレッド/UHDグラフィックス770)<span class="plusprice">+ 4900(税込)</label>
+          </div>
+        </section>
+        <section class="fan">
+          <h3>CPUファン</h3>
+            <div class="fan__01">
+              <input type="radio" id="fan01" name="fan" value="fan01" data-price="0">
+              <label for="fan01">(空冷式) 静音パックまんぞくコース</label>
+            </div>
+            <div class="fan__02">
+              <input type="radio" id="fan02" name="fan" value="fan02" data-price="3500">
+              <label for="fan02">(空冷式) DEEPCOOL AK400<span class="plusprice">+ 3500(税込)</label>
+            </div>
+            <div class="fan__03">
+              <input type="radio" id="fan03" name="fan" value="fan03" data-price="4000">
+              <label for="fan03">(空冷式) Scythe 虎徹 Mark3<span class="plusprice">+ 4000(税込)</label>
+            </div>
+            <div class="fan__04">
+              <input type="radio" id="fan04" name="fan" value="fan04" data-price="8900">
+              <label for="fan04">(水冷式) DEEPCOOL GAMMAXX L240 V2 (RGBライティング対応)<span class="plusprice">+ 8900(税込)</label>
+            </div>
+            <div class="fan__05">
+              <input type="radio" id="fan05" name="fan" value="fan05" data-price="10000">
+              <label for="fan05">(水冷式) ASETEK 624S-M2 (240mm/高速ファン搭載) (非発光)<span class="plusprice">+ 10000(税込)</label>
+            </div>
+            <div class="fan__06">
+              <input type="radio" id="fan06" name="fan" value="fan06" data-price="11900">
+              <label for="fan06">(水冷式) DEEPCOOL LS520 (ARGBライティング対応)<span class="plusprice">+ 11900(税込)</label>
+            </div>
+            <div class="fan__07">
+              <input type="radio" id="fan07" name="fan" value="fan07" data-price="13400">
+              <label for="fan07">(水冷式) DEEPCOOL LS520 (ARGBライティング対応) + 水冷ヘッドGALLERIAロゴプレート 《オススメ》<span class="plusprice">+ 13400(税込)</label>
+            </div>
+        </section>
+        <section class="grease">
+          <h3>CPUグリス</h3>
+            <div class="grease__01">
+              <input type="radio" id="grease01" name="grease" value="grease01" data-price="0">
+              <label for="grease01">ノーマルグリス
+                熱伝導率: 0.8W/m･K程度</label>
+            </div>
+            <div class="grease__02">
+              <input type="radio" id="grease02" name="grease" value="grease02" data-price="1800">
+              <label for="grease02">(熱伝導率: 9.0W/m・K) シルバーグリス(AINEX AS-05)<span class="plusprice">+ 1800(税込)</label>
+            </div>
+            <div class="grease__03">
+              <input type="radio" id="grease03" name="grease" value="grease03" data-price="1900">
+              <label for="grease03">(熱伝導率: 12.5W/m・K) Thermal Grizzly Kryonaut (TG-K-001-RS)<span class="plusprice">+ 1900(税込)</label>
+            </div>
+            <div class="grease__04">
+              <input type="radio" id="grease04" name="grease" value="grease04" data-price="2000">
+              <label for="grease04">(熱伝導率: 12.56W/m・K) ナノダイヤモンドグリス (OC7) <span class="plusprice">+ 2000(税込)</label>
+            </div>
+            <div class="grease__05">
+              <input type="radio" id="grease05" name="grease" value="grease05" data-price="2500">
+              <label for="grease05">(熱伝導率: 13.2W/m・K) OC Master (SMZ-01R)<span class="plusprice">+ 2500(税込)</label>
+            </div>
+            <div class="grease__06">
+              <input type="radio" id="grease06" name="grease" value="grease06" data-price="3500">
+              <label for="grease06">(熱伝導率: 14.2W/m・K) Thermal Grizzly Kryonaut Extreme (TG-KE-002-R)<span class="plusprice">+ 3500(税込)</label>
+            </div>
+        </section>
       </div>
-    </div>
-  </section>
+      <div id="total-price" class="total">
+        <div class="btn-wrap">
+          <div class="keep-btn">
+            <a href="#">構成一時保存</a>
+          </div>
+          <div class="prev-btn">
+            <a href="#">商品詳細に戻る</a>
+          </div>
+        </div>
+        <p>商品合計:<span></span></p>
+        <div class="order-btn">
+          <a href="">確認画面に進む</a>
+        </div>
+      </div>
+    </section>
+    <section class="product">
+      ああ
+    </section>
+    <section class="product">
+      いい
+    </section>
+    <section class="product">
+      うう
+    </section>
+
+  </div>
   <script src="./js/index.js"></script>
 </body>
 </html>
