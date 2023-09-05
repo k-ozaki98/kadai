@@ -7,6 +7,7 @@ function calculateTotalPrice() {
   let selectFan = document.querySelector('input[name="fan"]:checked');
   let selectGrease = document.querySelector('input[name="grease"]:checked');
   let selectCutpro = document.querySelector('input[name="cutpro"]:checked');
+  let selectGrapchic = document.querySelector('input[name="graphic"]:checked');
   
   // os選択
   if (selectOs) {
@@ -43,6 +44,12 @@ function calculateTotalPrice() {
     totalPrice += price;
   }
 
+  // グラフィック選択
+  if (selectGrapchic) {
+    let price = parseInt(selectGrapchic.dataset.price);
+    totalPrice += price;
+  }
+
   // カットプロ選択
   if (selectCutpro) {
     let price = parseInt(selectCutpro.dataset.price);
@@ -50,6 +57,20 @@ function calculateTotalPrice() {
   }
   
   document.querySelector('.total p span').textContent = `${totalPrice}円`;
+}
+
+function confirmShow() {
+  const inputOs = document.querySelectorAll('input[name="os"]');
+
+  const selectOs = document.querySelector('.select-os');
+
+  inputOs.forEach((input) => {
+    input.addEventListener('click', () => {
+      const selectValue = input.value;
+
+      selectOs.textContent = selectValue;
+    })
+  }) 
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -99,10 +120,23 @@ greaseOptions.forEach(function(option) {
   option.addEventListener('change', calculateTotalPrice);
 })
 
+let graphicOptions = document.querySelectorAll('input[name="graphic"]');
+graphicOptions.forEach(function(option) {
+  option.addEventListener('change', calculateTotalPrice);
+})
+
 let cutproOptions = document.querySelectorAll('input[name="cutpro"]');
 cutproOptions.forEach(function(option) {
   option.addEventListener('change', calculateTotalPrice);
 })
+
+
+const orderBtn = document.querySelector('.order-btn');
+const confirm = document.querySelector('.confirm');
+orderBtn.addEventListener('click', () => {
+  confirm.style.display = "block";
+});
+
 
 // ページ読み込み時に計算を実行
 calculateTotalPrice();
