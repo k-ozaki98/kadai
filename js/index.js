@@ -247,12 +247,15 @@ function confirmShow() {
   let confirmSection = document.querySelector('.confirm');
   confirmSection.style.display = 'block';
 
+  // let confirmLayer = document.querySelector('.confirm__layer');
+  // confirmLayer.addEventListener('click', function(event) {
+  //   event.preventDefault();
+  //   event.stopPropagation();
+  // });
+
   // window.addEventListener('click', function(event) {
   //   let target = event.target;
-  //   let confirmContents = document.querySelector('.confirm__contents');
-
   //   if (!confirmContents.contains(target)) {
-  //     let confirmSection = document.querySelector('.confirm');
   //     confirmSection.style.display = 'none';
   //   }
   // });
