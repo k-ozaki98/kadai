@@ -247,15 +247,15 @@ function confirmShow() {
   let confirmSection = document.querySelector('.confirm');
   confirmSection.style.display = 'block';
 
-  window.addEventListener('click', function(event) {
-    let target = event.target;
-    let confirmContents = document.querySelector('.confirm__contents');
+  // window.addEventListener('click', function(event) {
+  //   let target = event.target;
+  //   let confirmContents = document.querySelector('.confirm__contents');
 
-    if (!confirmContents.contains(target)) {
-      let confirmSection = document.querySelector('.confirm');
-      confirmSection.style.display = 'none';
-    }
-  });
+  //   if (!confirmContents.contains(target)) {
+  //     let confirmSection = document.querySelector('.confirm');
+  //     confirmSection.style.display = 'none';
+  //   }
+  // });
 }
 
 
