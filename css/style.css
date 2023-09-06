@@ -171,6 +171,41 @@ input[type=radio]:checked + label {
   border-top: 4px solid #004da1;
 }
 
+.graphic {
+  padding: 30px;
+  margin-bottom: 50px;
+  background: #f6f6f6;
+  border-top: 4px solid #004da1;
+}
+
+.power {
+  padding: 30px;
+  margin-bottom: 50px;
+  background: #f6f6f6;
+  border-top: 4px solid #004da1;
+}
+
+.memory {
+  padding: 30px;
+  margin-bottom: 50px;
+  background: #f6f6f6;
+  border-top: 4px solid #004da1;
+}
+
+.ssd {
+  padding: 30px;
+  margin-bottom: 50px;
+  background: #f6f6f6;
+  border-top: 4px solid #004da1;
+}
+
+.harddisk {
+  padding: 30px;
+  margin-bottom: 50px;
+  background: #f6f6f6;
+  border-top: 4px solid #004da1;
+}
+
 .total {
   width: 100%;
   position: fixed;
@@ -283,11 +318,15 @@ input[type=radio]:checked + label {
   width: 920px;
   height: 65vh;
   border-radius: 30px;
+  overflow-y: scroll;
 }
 .confirm__contents dl {
   border-bottom: 2px solid #c8c8c8;
   padding: 20px 0;
   display: flex;
+}
+.confirm__contents dl:last-of-type {
+  margin-bottom: 40px;
 }
 .confirm__contents dl dt {
   width: 25%;
@@ -297,4 +336,14 @@ input[type=radio]:checked + label {
 .confirm__contents dl dd {
   font-size: 14px;
   width: 65%;
+}
+.confirm__contents .total-price {
+  font-size: 20px;
+  text-align: right;
+}
+.confirm__contents .total-price span {
+  color: #e43344;
+  font-weight: bold;
+  font-size: 33px;
+  margin-left: 30px;
 }

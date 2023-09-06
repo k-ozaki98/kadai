@@ -23,7 +23,7 @@
         <section class="os">
           <h3>OS</h3>
           <div class="os__01">
-            <input type="radio" id="8gb" name="os" value="8gb" data-price="0">
+            <input type="radio" id="8gb" name="os" value="8gb" data-price="0" checked>
             <label for="8gb">Windows 11 Home 64ビット<span class="plusprice">0円</span></label>
           </div>
           <div class="os__02">
@@ -34,12 +34,12 @@
         <section class="office">
           <h3>オフィスソフト</h3>
           <div class="office__01">
-            <input type="radio" id="512gb" name="office" value="512gb" data-price="0">
+            <input type="radio" id="512gb" name="office" value="512gb" data-price="0" checked>
             <label for="512gb">Office なし</label>
           </div>
           <div class="office__02">
             <input type="radio" id="1tb" name="office" value="1tb" data-price="22000">
-            <label for="1tb">Microsoft(R) Office Personal 2021 (Word/Excel/Outlook)<span class="plusprice">+ 22,000(税込)</label>
+            <label for="1tb"><span>Microsoft(R) Office Personal 2021 (Word/Excel/Outlook)</span><span class="plusprice">+ 22,000(税込)</label>
           </div>
           <div class="office__03">
             <input type="radio" id="2tb" name="office" value="2tb" data-price="27500">
@@ -57,7 +57,7 @@
         <section class="security">
           <h3>セキュリティソフト</h3>
           <div class="security__01">
-            <input type="radio" id="security01" name="security" value="security01" data-price="0">
+            <input type="radio" id="security01" name="security" value="security01" data-price="0" checked>
             <label for="security01">sノートンセキュリティ スタンダード30日版プリインストール【更新特典付】</label>
           </div>
           <div class="security__02">
@@ -78,7 +78,7 @@
         <section class="cpu">
           <h3>CPU</h3>
           <div class="cpu__01">
-            <input type="radio" id="coreF" name="cpu" value="coreF" data-price="0">
+            <input type="radio" id="coreF" name="cpu" value="coreF" data-price="0" checked>
             <label for="coreF">インテル Core i7-13700F (2.10GHz-5.20GHz/16コア/24スレッド)</label>
           </div>
           <div class="cpu__02">
@@ -89,7 +89,7 @@
         <section class="fan">
           <h3>CPUファン</h3>
             <div class="fan__01">
-              <input type="radio" id="fan01" name="fan" value="fan01" data-price="0">
+              <input type="radio" id="fan01" name="fan" value="fan01" data-price="0" checked>
               <label for="fan01">(空冷式) 静音パックまんぞくコース</label>
             </div>
             <div class="fan__02">
@@ -120,7 +120,7 @@
         <section class="grease">
           <h3>CPUグリス</h3>
             <div class="grease__01">
-              <input type="radio" id="grease01" name="grease" value="grease01" data-price="0">
+              <input type="radio" id="grease01" name="grease" value="grease01" data-price="0" checked>
               <label for="grease01">ノーマルグリス
                 熱伝導率: 0.8W/m･K程度</label>
             </div>
@@ -145,6 +145,123 @@
               <label for="grease06">(熱伝導率: 14.2W/m・K) Thermal Grizzly Kryonaut Extreme (TG-KE-002-R)<span class="plusprice">+ 3500(税込)</label>
             </div>
         </section>
+        <section class="graphic">
+          <h3>グラフィック機能</h3>
+            <div class="graphic__01">
+              <input type="radio" id="graphic01" name="graphic" value="graphic01" data-price="0" checked>
+              <label for="graphic01">NVIDIA GeForce RTX 4060 Ti 8GB (HDMI x1，DisplayPort x3)</label>
+            </div>
+        </section>
+        <section class="power">
+          <h3>電源</h3>
+            <div class="power__01">
+              <input type="radio" id="power01" name="power" value="power01" data-price="0" checked>
+              <label for="power01">650W 電源 (80PLUS BRONZE)</label>
+            </div>
+            <div class="power__02">
+              <input type="radio" id="power02" name="power" value="power02" data-price="6000" checked>
+              <label for="power02">750W 電源 (80PLUS GOLD)<span class="plusprice">+ 6000円</span></label>
+            </div>
+            <div class="power__03">
+              <input type="radio" id="power03" name="power" value="power03" data-price="8900" checked>
+              <label for="power03">750W 電源 (80PLUS PLATINUM) SILVERSTONE<span class="plusprice">+ 8900円</span></label>
+            </div>
+            <div class="power__04">
+              <input type="radio" id="power04" name="power" value="power04" data-price="19900" checked>
+              <label for="power04">750W 電源 (80PLUS GOLD) Seasonic<span class="plusprice">+ 19900円</span></label>
+            </div>
+            <div class="power__05">
+              <input type="radio" id="power05" name="power" value="power05" data-price="11000" checked>
+              <label for="power05">800W 電源 (80PLUS TITANIUM) Enhance 《オススメ》<span class="plusprice">+ 11000円</span></label>
+            </div>
+            <div class="power__06">
+              <input type="radio" id="power06" name="power" value="power06" data-price="11000" checked>
+              <label for="power06">850W 電源 (80PLUS GOLD)<span class="plusprice">+ 11000円</span></label>
+            </div>
+        </section>
+        <section class="memory">
+          <h3>メモリ</h3>
+            <div class="memory__01">
+              <input type="radio" id="memory01" name="memory" value="memory01" data-price="0" checked>
+              <label for="memory01">16GB (8GBx2) (DDR4-3200)</label>
+            </div>
+            <div class="memory__02">
+              <input type="radio" id="memory02" name="memory" value="memory02" data-price="3000" checked>
+              <label for="memory02">16GB (8GBx2) (DDR4-3200) SAMSUNG<span class="plusprice">+ 3000円</span></label>
+            </div>
+            <div class="memory__03">
+              <input type="radio" id="memory03" name="memory" value="memory03" data-price="14000" checked>
+              <label for="memory03">32GB (16GBx2) (DDR4-3200) 《オススメ》<span class="plusprice">+ 14000円</span></label>
+            </div>
+            <div class="memory__04">
+              <input type="radio" id="memory04" name="memory" value="memory04" data-price="18000" checked>
+              <label for="memory04">32GB (16GBx2) (DDR4-3200) SAMSUNG<span class="plusprice">+ 18000円</span></label>
+            </div>
+            <div class="memory__05">
+              <input type="radio" id="memory05" name="memory" value="memory05" data-price="18000" checked>
+              <label for="memory05">64GB (32GBx2) (DDR4-3200)<span class="plusprice">+ 18000円</span></label>
+            </div>
+            <div class="memory__06">
+              <input type="radio" id="memory06" name="memory" value="memory06" data-price="41000" checked>
+              <label for="memory06">64GB (32GBx2) (DDR4-3200) SAMSUNG<span class="plusprice">+ 41000円</span></label>
+            </div>
+        </section>
+        <section class="ssd">
+          <h3>SSD</h3>
+            <div class="ssd__01">
+              <input type="radio" id="ssd01" name="ssd" value="ssd01" data-price="0" checked>
+              <label for="ssd01">1TB SSD (NVMe Gen3)</label>
+            </div>
+            <div class="ssd__02">
+              <input type="radio" id="ssd02" name="ssd" value="ssd02" data-price="5000" checked>
+              <label for="ssd02">1TB SSD (NVMe Gen4)<span class="plusprice">+ 5000円</span></label>
+            </div>
+            <div class="ssd__03">
+              <input type="radio" id="ssd03" name="ssd" value="ssd03" data-price="7500" checked>
+              <label for="ssd03">1TB SSD (NVMe Gen4) Crucial (読込速度 6600MB/s,書込速度 5000MB/s)
+                <span class="plusprice">+ 7500円</span></label>
+            </div>
+            <div class="ssd__04">
+              <input type="radio" id="ssd04" name="ssd" value="ssd04" data-price="11000" checked>
+              <label for="ssd04">1TB SSD (NVMe Gen4) Samsung (読込速度 7000MB/s,書込速度 5000MB/s)<span class="plusprice">+ 11000円</span></label>
+            </div>
+            <div class="ssd__05">
+              <input type="radio" id="ssd05" name="ssd" value="ssd05" data-price="13500" checked>
+              <label for="ssd05">1TB SSD (NVMe Gen4) Seagate (読込速度 7300MB/s,書込速度 6000MB/s)<span class="plusprice">+ 13500円</span></label>
+            </div>
+            <div class="ssd__06">
+              <input type="radio" id="ssd06" name="ssd" value="ssd06" data-price="13800" checked>
+              <label for="ssd06">1TB SSD (NVMe Gen4) WD (読込速度 7300MB/s,書込速度 6300MB/s)<span class="plusprice">+ 13800円</span></label>
+            </div>
+        </section>
+        <section class="harddisk">
+          <h3>ハードディスク/SSD</h3>
+            <div class="harddisk__01">
+              <input type="radio" id="harddisk01" name="harddisk" value="harddisk01" data-price="0" checked>
+              <label for="harddisk01">追加ストレージ 無し</label>
+            </div>
+            <div class="harddisk__02">
+              <input type="radio" id="harddisk02" name="harddisk" value="harddisk02" data-price="10000" checked>
+              <label for="harddisk02">1TB SSD (NVMe Gen3) + ヒートシンク<span class="plusprice">+ 10000円</span></label>
+            </div>
+            <div class="harddisk__03">
+              <input type="radio" id="harddisk03" name="harddisk" value="harddisk03" data-price="13000" checked>
+              <label for="harddisk03">1TB SSD (NVMe Gen4) + ヒートシンク
+                <span class="plusprice">+ 13000円</span></label>
+            </div>
+            <div class="harddisk__04">
+              <input type="radio" id="harddisk04" name="harddisk" value="harddisk04" data-price="17000" checked>
+              <label for="harddisk04">2TB SSD (NVMe Gen3) + ヒートシンク<span class="plusprice">+ 17000円</span></label>
+            </div>
+            <div class="harddisk__05">
+              <input type="radio" id="harddisk05" name="harddisk" value="harddisk05" data-price="24000" checked>
+              <label for="harddisk05">2TB SSD (NVMe Gen4) + ヒートシンク<span class="plusprice">+ 24000円</span></label>
+            </div>
+            <div class="harddisk__06">
+              <input type="radio" id="harddisk06" name="harddisk" value="harddisk06" data-price="42000" checked>
+              <label for="harddisk06">4TB SSD (NVMe Gen4) + ヒートシンク<span class="plusprice">+ 42000円</span></label>
+            </div>
+        </section>
       </div>
       <div id="total-price" class="total">
         <div class="btn-wrap">
@@ -157,18 +274,16 @@
         </div>
         <p>商品合計:<span></span></p>
         <div class="order-btn">
-          <a href="">確認画面に進む</a>
+          <p href="">確認</p>
         </div>
       </div>
     </section>
-    <section class="product">
-      ああ
-    </section>
-    <section class="product">
-      いい
-    </section>
-    <section class="product">
-      うう
+
+    <section class="confirm">
+      <div class="confirm__layer">
+        <div class="confirm__contents">
+        </div>
+      </div>
     </section>
 
   </div>
