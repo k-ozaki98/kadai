@@ -36,7 +36,7 @@ img {
 
 /* common */
 .l-inner {
-  width: 1500px;
+  width: 920px;
   margin: 0 auto;
 }
 
@@ -103,11 +103,14 @@ input[type=radio]:checked + label {
   display: flex;
   padding-top: 55px;
   margin-bottom: 65px;
+  padding-left: 0;
 }
 .product__list li {
   width: 25%;
   max-height: 50px;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding-top: 20px;
   padding-bottom: 20px;
   text-align: center;
@@ -116,6 +119,10 @@ input[type=radio]:checked + label {
   font-weight: bold;
   color: #a3a3a3;
   cursor: pointer;
+}
+.product__list .is-active {
+  background: #004da1;
+  color: #fff;
 }
 .product__wrap {
   padding-bottom: 15rem;
@@ -129,80 +136,12 @@ input[type=radio]:checked + label {
   display: block;
 }
 
-.os {
+.os, .office, .security, .cpu, .fan, .grease, .graphic, .power,
+.memory, .ssd, .harddisk, .addhard, .drive, .sound, .case, .rear,
+.topfront, .toprear, .lan, .wireless {
   padding: 30px;
   background: #f6f6f6;
   margin-bottom: 50px;
-  border-top: 4px solid #004da1;
-}
-
-.office {
-  padding: 30px;
-  margin-bottom: 50px;
-  background: #f6f6f6;
-  border-top: 4px solid #004da1;
-}
-
-.security {
-  padding: 30px;
-  margin-bottom: 50px;
-  background: #f6f6f6;
-  border-top: 4px solid #004da1;
-}
-
-.cpu {
-  padding: 30px;
-  margin-bottom: 50px;
-  background: #f6f6f6;
-  border-top: 4px solid #004da1;
-}
-
-.fan {
-  padding: 30px;
-  margin-bottom: 50px;
-  background: #f6f6f6;
-  border-top: 4px solid #004da1;
-}
-
-.grease {
-  padding: 30px;
-  margin-bottom: 50px;
-  background: #f6f6f6;
-  border-top: 4px solid #004da1;
-}
-
-.graphic {
-  padding: 30px;
-  margin-bottom: 50px;
-  background: #f6f6f6;
-  border-top: 4px solid #004da1;
-}
-
-.power {
-  padding: 30px;
-  margin-bottom: 50px;
-  background: #f6f6f6;
-  border-top: 4px solid #004da1;
-}
-
-.memory {
-  padding: 30px;
-  margin-bottom: 50px;
-  background: #f6f6f6;
-  border-top: 4px solid #004da1;
-}
-
-.ssd {
-  padding: 30px;
-  margin-bottom: 50px;
-  background: #f6f6f6;
-  border-top: 4px solid #004da1;
-}
-
-.harddisk {
-  padding: 30px;
-  margin-bottom: 50px;
-  background: #f6f6f6;
   border-top: 4px solid #004da1;
 }
 
