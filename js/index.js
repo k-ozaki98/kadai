@@ -155,6 +155,8 @@ function confirmShow() {
   let selectWireless = document.querySelector('input[name="wireless"]:checked + label');
 
   let confirmContents = document.querySelector('.confirm__contents');
+ 
+  
 
   confirmContents.innerHTML = `
     <h3 class="confirm__ttl">カスタマイズ内容の確認</h3>
@@ -243,23 +245,34 @@ function confirmShow() {
   let totalPriceElement = document.querySelector('.total-price span');
   let totalPrice = calculateTotalPrice();
   totalPriceElement.textContent = `${totalPrice}円`;
+  
 
   let confirmSection = document.querySelector('.confirm');
   confirmSection.style.display = 'block';
 
+  
+}
+
+function confirmHide() {
   let confirmLayer = document.querySelector('.confirm__layer');
+  confirmContents = document.querySelector('.confirm__contents');
   confirmLayer.addEventListener('click', function(event) {
     event.preventDefault();
     event.stopPropagation();
-  });
-
-  window.addEventListener('click', function(event) {
     let target = event.target;
+    confirmSection = document.querySelector('.confirm');
     if (!confirmContents.contains(target)) {
       confirmSection.style.display = 'none';
     }
   });
+  
+  
+
+  window.removeEventListener('click', confirmHide);
+
 }
+
+
 
 
 // 価格反映
@@ -351,8 +364,13 @@ wirelessOptions.forEach(function(option) {
   option.addEventListener('change', calculateTotalPrice);
 })
 
+
+
 const orderBtn = document.querySelector('.order-btn');
 orderBtn.addEventListener('click', confirmShow);
+const layer = document.querySelector('.confirm__layer');
+layer.addEventListener('click', confirmHide);
+
 
 
 
