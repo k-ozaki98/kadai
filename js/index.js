@@ -247,18 +247,18 @@ function confirmShow() {
   let confirmSection = document.querySelector('.confirm');
   confirmSection.style.display = 'block';
 
-  // let confirmLayer = document.querySelector('.confirm__layer');
-  // confirmLayer.addEventListener('click', function(event) {
-  //   event.preventDefault();
-  //   event.stopPropagation();
-  // });
+  let confirmLayer = document.querySelector('.confirm__layer');
+  confirmLayer.addEventListener('click', function(event) {
+    event.preventDefault();
+    event.stopPropagation();
+  });
 
-  // window.addEventListener('click', function(event) {
-  //   let target = event.target;
-  //   if (!confirmContents.contains(target)) {
-  //     confirmSection.style.display = 'none';
-  //   }
-  // });
+  window.addEventListener('click', function(event) {
+    let target = event.target;
+    if (!confirmContents.contains(target)) {
+      confirmSection.style.display = 'none';
+    }
+  });
 }
 
 
