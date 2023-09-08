@@ -1,3 +1,5 @@
+import $ from "jquery";
+
 function calculateTotalPrice() {
   let totalPrice = 100000;
   let selectOs = document.querySelector('input[name="os"]:checked');
