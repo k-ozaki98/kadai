@@ -9,48 +9,18 @@ function addTotalPrice(element) {
 }
 
 function calculateTotalPrice() {
-  
-  let selectOs = document.querySelector('input[name="os"]:checked');
-  let selectOffice = document.querySelector('input[name="office"]:checked');
-  let selectSecurity = document.querySelector('input[name="security"]:checked');
-  let selectCpu = document.querySelector('input[name="cpu"]:checked');
-  let selectFan = document.querySelector('input[name="fan"]:checked');
-  let selectGrease = document.querySelector('input[name="grease"]:checked');
-  let selectGraphic = document.querySelector('input[name="graphic"]:checked');
-  let selectPower = document.querySelector('input[name="power"]:checked');
-  let selectMemory = document.querySelector('input[name="memory"]:checked');
-  let selectSsd = document.querySelector('input[name="ssd"]:checked');
-  let selectHarddisk = document.querySelector('input[name="harddisk"]:checked');
-  let selectAddHard = document.querySelector('input[name="addhard"]:checked');
-  let selectDrive = document.querySelector('input[name="drive"]:checked');
-  let selectSound = document.querySelector('input[name="sound"]:checked');
-  let selectCase = document.querySelector('input[name="case"]:checked');
-  let selectRear = document.querySelector('input[name="rear"]:checked');
-  let selectTopFront = document.querySelector('input[name="topfront"]:checked');
-  let selectTopRear = document.querySelector('input[name="toprear"]:checked');
-  let selectLan = document.querySelector('input[name="lan"]:checked');
-  let selectWireless = document.querySelector('input[name="wireless"]:checked');
-  
-  addTotalPrice(selectOs);
-  addTotalPrice(selectOffice);
-  addTotalPrice(selectSecurity);
-  addTotalPrice(selectCpu);
-  addTotalPrice(selectFan);
-  addTotalPrice(selectGrease);
-  addTotalPrice(selectGraphic);
-  addTotalPrice(selectPower);
-  addTotalPrice(selectMemory);
-  addTotalPrice(selectSsd);
-  addTotalPrice(selectHarddisk);
-  addTotalPrice(selectAddHard);
-  addTotalPrice(selectDrive);
-  addTotalPrice(selectSound);
-  addTotalPrice(selectCase);
-  addTotalPrice(selectRear);
-  addTotalPrice(selectTopFront);
-  addTotalPrice(selectTopRear);
-  addTotalPrice(selectLan);
-  addTotalPrice(selectWireless);
+
+  const checkNames = [
+    'os', 'office', 'security', 'cpu', 'fan', 'grease', 'graphic', 'power', 'memory', 'ssd', 'harddisk', 'addhard', 'drive', 'sound', 'case', 'rear', 'topfront', 'toprear', 'lan', 'wireless'
+  ];
+
+  checkNames.forEach(checkName => {
+    const checkboxes = document.querySelectorAll(`input[name="${checkName}"]:checked`);
+    checkboxes.forEach(function(checkbox) {
+      addTotalPrice(checkbox);
+    });
+  });
+
   
   document.querySelector('.total p span').textContent = `${totalPrice}円`;
 
