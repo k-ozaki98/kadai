@@ -1,4 +1,4 @@
-import $ from "jquery";
+// import $ from "jquery";
 
 function calculateTotalPrice() {
   let totalPrice = 100000;
@@ -257,12 +257,12 @@ function confirmShow() {
 
 function confirmHide() {
   let confirmLayer = document.querySelector('.confirm__layer');
-  confirmContents = document.querySelector('.confirm__contents');
+  let confirmContents = document.querySelector('.confirm__contents');
   confirmLayer.addEventListener('click', function(event) {
     event.preventDefault();
     event.stopPropagation();
     let target = event.target;
-    confirmSection = document.querySelector('.confirm');
+    let confirmSection = document.querySelector('.confirm');
     if (!confirmContents.contains(target)) {
       confirmSection.style.display = 'none';
     }
