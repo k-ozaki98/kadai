@@ -1,7 +1,15 @@
 // import $ from "jquery";
+let totalPrice = 100000;
+
+function addTotalPrice(element) {
+  if (element) {
+    let price = parseInt(element.dataset.price);
+    totalPrice += price;
+  }
+}
 
 function calculateTotalPrice() {
-  let totalPrice = 100000;
+  
   let selectOs = document.querySelector('input[name="os"]:checked');
   let selectOffice = document.querySelector('input[name="office"]:checked');
   let selectSecurity = document.querySelector('input[name="security"]:checked');
@@ -23,111 +31,26 @@ function calculateTotalPrice() {
   let selectLan = document.querySelector('input[name="lan"]:checked');
   let selectWireless = document.querySelector('input[name="wireless"]:checked');
   
-  // os選択
-  if (selectOs) {
-    let price = parseInt(selectOs.dataset.price);
-    totalPrice += price;
-  }
-  
-  // オフィスソフト選択
-  if (selectOffice) {
-    let price = parseInt(selectOffice.dataset.price);
-    totalPrice += price;
-  }
-  
-  // セキュリティソフト選択
-  if (selectSecurity) {
-    let price = parseInt(selectSecurity.dataset.price);
-    totalPrice += price;
-  }
-
-  // cpu選択
-  if (selectCpu) {
-    let price = parseInt(selectCpu.dataset.price);
-    totalPrice += price;
-  }
-  
-  // cpuファン選択
-  if (selectFan) {
-    let price = parseInt(selectFan.dataset.price);
-    totalPrice += price;
-  }
-  // cpuグリス選択
-  if (selectGrease) {
-    let price = parseInt(selectGrease.dataset.price);
-    totalPrice += price;
-  }
-
-  // グラフィック選択
-  if (selectGraphic) {
-    let price = parseInt(selectGraphic.dataset.price);
-    totalPrice += price;
-  }
-  // 電源選択
-  if (selectPower) {
-    let price = parseInt(selectPower.dataset.price);
-    totalPrice += price;
-  }
-  // メモリ選択
-  if (selectMemory) {
-    let price = parseInt(selectMemory.dataset.price);
-    totalPrice += price;
-  }
-  // SSD選択
-  if (selectSsd) {
-    let price = parseInt(selectSsd.dataset.price);
-    totalPrice += price;
-  }
-  // ハードディスク選択
-  if (selectHarddisk) {
-    let price = parseInt(selectHarddisk.dataset.price);
-    totalPrice += price;
-  }
-  // ハードディスク追加選択
-  if (selectAddHard) {
-    let price = parseInt(selectAddHard.dataset.price);
-    totalPrice += price;
-  }
-  // 光学ドライブ選択
-  if (selectDrive) {
-    let price = parseInt(selectDrive.dataset.price);
-    totalPrice += price;
-  }
-  // サウンド選択
-  if (selectSound) {
-    let price = parseInt(selectSound.dataset.price);
-    totalPrice += price;
-  }
-  // ケース選択
-  if (selectCase) {
-    let price = parseInt(selectCase.dataset.price);
-    totalPrice += price;
-  }
-  // リアケースファン選択
-  if (selectRear) {
-    let price = parseInt(selectRear.dataset.price);
-    totalPrice += price;
-  }
-  // トップケースファン前部選択
-  if (selectTopFront) {
-    let price = parseInt(selectTopFront.dataset.price);
-    totalPrice += price;
-  }
-  // トップケースファン後部選択
-  if (selectTopRear) {
-    let price = parseInt(selectTopRear.dataset.price);
-    totalPrice += price;
-  }
-  // LAN選択
-  if (selectLan) {
-    let price = parseInt(selectLan.dataset.price);
-    totalPrice += price;
-  }
-  // 無線LAN選択
-  if (selectWireless) {
-    let price = parseInt(selectWireless.dataset.price);
-    totalPrice += price;
-  }
+  addTotalPrice(selectOs);
+  addTotalPrice(selectOffice);
+  addTotalPrice(selectSecurity);
+  addTotalPrice(selectCpu);
+  addTotalPrice(selectFan);
+  addTotalPrice(selectGrease);
+  addTotalPrice(selectGraphic);
+  addTotalPrice(selectPower);
+  addTotalPrice(selectMemory);
+  addTotalPrice(selectSsd);
+  addTotalPrice(selectHarddisk);
+  addTotalPrice(selectAddHard);
+  addTotalPrice(selectDrive);
+  addTotalPrice(selectSound);
+  addTotalPrice(selectCase);
+  addTotalPrice(selectRear);
+  addTotalPrice(selectTopFront);
+  addTotalPrice(selectTopRear);
+  addTotalPrice(selectLan);
+  addTotalPrice(selectWireless);
   
   document.querySelector('.total p span').textContent = `${totalPrice}円`;
 
@@ -275,96 +198,15 @@ function confirmHide() {
 }
 
 
-
-
 // 価格反映
-let osOptions = document.querySelectorAll('input[name="os"]');
-osOptions.forEach(function(option) {
-  option.addEventListener('change', calculateTotalPrice);
+const optionNames = ['os', 'office', 'security', 'cpu', 'fan', 'grease', 'graphic', 'power', 'memory', 'ssd', 'harddisk', 'addhard', 'drive', 'sound', 'case', 'rear', 'topfront', 'toprear', 'lan', 'wireless']
+
+optionNames.forEach(optionName => {
+  let options = document.querySelectorAll(`input[name="${optionName}"]`);
+  options.forEach(function(option) {
+    option.addEventListener('change', calculateTotalPrice);
+  });
 });
-
-let officeOptions = document.querySelectorAll('input[name="office"]');
-officeOptions.forEach(function(option) {
-  option.addEventListener('change', calculateTotalPrice);
-});
-
-let securityOptions = document.querySelectorAll('input[name="security"]');
-securityOptions.forEach(function(option) {
-  option.addEventListener('change', calculateTotalPrice);
-});
-
-let cpuOptions = document.querySelectorAll('input[name="cpu"]');
-cpuOptions.forEach(function(option) {
-  option.addEventListener('change', calculateTotalPrice);
-})
-
-let fanOptions = document.querySelectorAll('input[name="fan"]');
-fanOptions.forEach(function(option) {
-  option.addEventListener('change', calculateTotalPrice);
-})
-
-let greaseOptions = document.querySelectorAll('input[name="grease"]');
-greaseOptions.forEach(function(option) {
-  option.addEventListener('change', calculateTotalPrice);
-})
-
-let graphicOptions = document.querySelectorAll('input[name="graphic"]');
-graphicOptions.forEach(function(option) {
-  option.addEventListener('change', calculateTotalPrice);
-})
-
-let powerOptions = document.querySelectorAll('input[name="power"]');
-powerOptions.forEach(function(option) {
-  option.addEventListener('change', calculateTotalPrice);
-})
-let memoryOptions = document.querySelectorAll('input[name="memory"]');
-memoryOptions.forEach(function(option) {
-  option.addEventListener('change', calculateTotalPrice);
-})
-let ssdOptions = document.querySelectorAll('input[name="ssd"]');
-ssdOptions.forEach(function(option) {
-  option.addEventListener('change', calculateTotalPrice);
-})
-let harddiskOptions = document.querySelectorAll('input[name="harddisk"]');
-harddiskOptions.forEach(function(option) {
-  option.addEventListener('change', calculateTotalPrice);
-})
-let addhardOptions = document.querySelectorAll('input[name="addhard"]');
-addhardOptions.forEach(function(option) {
-  option.addEventListener('change', calculateTotalPrice);
-})
-let driveOptions = document.querySelectorAll('input[name="drive"]');
-driveOptions.forEach(function(option) {
-  option.addEventListener('change', calculateTotalPrice);
-})
-let soundOptions = document.querySelectorAll('input[name="sound"]');
-soundOptions.forEach(function(option) {
-  option.addEventListener('change', calculateTotalPrice);
-})
-let caseOptions = document.querySelectorAll('input[name="case"]');
-caseOptions.forEach(function(option) {
-  option.addEventListener('change', calculateTotalPrice);
-})
-let rearOptions = document.querySelectorAll('input[name="rear"]');
-rearOptions.forEach(function(option) {
-  option.addEventListener('change', calculateTotalPrice);
-})
-let topfrontOptions = document.querySelectorAll('input[name="topfront"]');
-topfrontOptions.forEach(function(option) {
-  option.addEventListener('change', calculateTotalPrice);
-})
-let toprearOptions = document.querySelectorAll('input[name="toprear"]');
-toprearOptions.forEach(function(option) {
-  option.addEventListener('change', calculateTotalPrice);
-})
-let lanOptions = document.querySelectorAll('input[name="lan"]');
-lanOptions.forEach(function(option) {
-  option.addEventListener('change', calculateTotalPrice);
-})
-let wirelessOptions = document.querySelectorAll('input[name="wireless"]');
-wirelessOptions.forEach(function(option) {
-  option.addEventListener('change', calculateTotalPrice);
-})
 
 
 
