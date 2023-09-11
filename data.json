@@ -1,0 +1,114 @@
+{
+    "data": {
+        "os": [
+            {
+                "id": "8gb",
+                "option_name": "Windows 11 Home 64ビット",
+                "price": "0"
+            },
+            {
+                "id": "16gb",
+                "option_name": "Windows 11 Pro 64ビット",
+                "price": "7000"
+            }
+        ],
+        "office": [
+            {
+                "id": "512gb",
+                "option_name": "Office なし",
+                "price": "0"
+            },
+            {
+                "id": "1tb",
+                "option_name": "Microsoft(R) Office Personal 2021 (Word/Excel/Outlook)",
+                "price": "22000"
+            },
+            {
+                "id": "2tb",
+                "option_name": "2Microsoft(R) Office Home and Business 2021 (Word/Excel/PowerPoint/Outlook) 《オススメ》",
+                "price": "27500"
+            },
+            {
+                "id": "profeddional",
+                "option_name": "Microsoft(R) Office Professional 2021 (Word/Excel/PowerPoint/Outlook/Access/Publisher)",
+                "price": "53900"
+            },
+            {
+                "id": "kingsoft",
+                "option_name": "KINGSOFT WPS Office 2 (ワープロ/表計算/プレゼンテーション)",
+                "price": "3080"
+            },
+            {
+                "id": "kingsoft",
+                "option_name": "KINGSOFT WPS Office 2 (ワープロ/表計算/プレゼンテーション)",
+                "price": "3080"
+            },
+        ],
+        "security": [
+            {
+                "id": "security01",
+                "option_name": "sノートンセキュリティ スタンダード30日版プリインストール【更新特典付】",
+                "price": "0"
+            },
+            {
+                "id": "security02",
+                "option_name": "ノートン360スタンダードプラス1 【1年版 自動更新】【プロダクトキー/チラシ同梱】",
+                "price": "22000"
+            },
+            {
+                "id": "security03",
+                "option_name": "ノートンセキュリティ スタンダード30日版プリインストール【更新特典付】 + ノートン ID アドバイザー【1年 バンドル版】",
+                "price": "27500"
+            },
+            {
+                "id": "security04",
+                "option_name": "ノートン360スタンダードプラス1 【1年版 自動更新】【プロダクトキー/チラシ同梱】 + ノートン ID アドバイザー【1年 バンドル版】",
+                "price": "53900"
+            }
+        ],
+        "cpu": [
+            {
+                "id": "coreF",
+                "option_name": "インテル Core i7-13700F (2.10GHz-5.20GHz/16コア/24スレッド)",
+                "price": "0"
+            },
+            {
+                "id": "core",
+                "option_name": "インテル Core i7-13700 (2.10GHz-5.20GHz/16コア/24スレッド/UHDグラフィックス770)",
+                "price": "4900"
+            },
+        ],
+        "fan": [
+            {
+                "id": "fan01",
+                "option_name": "(空冷式) 静音パックまんぞくコース",
+                "price": "0"
+            },
+            {
+                "id": "fan02",
+                "option_name": "(空冷式) DEEPCOOL AK400",
+                "price": "3500"
+            },
+            {
+                "id": "fan03",
+                "option_name": "(空冷式) Scythe 虎徹 Mark3",
+                "price": "4000"
+            },
+            {
+                "id": "fan04",
+                "option_name": "(水冷式) DEEPCOOL GAMMAXX L240 V2 (RGBライティング対応)",
+                "price": "8900"
+            },
+            {
+                "id": "fan05",
+                "option_name": "(水冷式) ASETEK 624S-M2 (240mm/高速ファン搭載) (非発光)",
+                "price": "10000"
+            },
+            {
+                "id": "fan05",
+                "option_name": "(水冷式) ASETEK 624S-M2 (240mm/高速ファン搭載) (非発光)",
+                "price": "10000"
+            },
+        ],
+    }
+}

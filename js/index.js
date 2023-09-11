@@ -1,4 +1,5 @@
-// import $ from "jquery";
+import $ from "jquery";
+
 let totalPrice = 100000;
 
 function addTotalPrice(element) {
