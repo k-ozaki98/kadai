@@ -1,4 +1,4 @@
-import $ from "jquery";
+
 
 let totalPrice = 100000;
 
