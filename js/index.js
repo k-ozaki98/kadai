@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 
 
 let totalPrice = 100000;
@@ -9,6 +10,8 @@ function addTotalPrice(element) {
   }
 }
 
+=======
+>>>>>>> Stashed changes
 function calculateTotalPrice() {
 
   const checkNames = [
@@ -51,8 +54,6 @@ function confirmShow() {
   let selectWireless = document.querySelector('input[name="wireless"]:checked + label');
 
   let confirmContents = document.querySelector('.confirm__contents');
- 
-  
 
   confirmContents.innerHTML = `
     <h3 class="confirm__ttl">カスタマイズ内容の確認</h3>
@@ -141,31 +142,28 @@ function confirmShow() {
   let totalPriceElement = document.querySelector('.total-price span');
   let totalPrice = calculateTotalPrice();
   totalPriceElement.textContent = `${totalPrice}円`;
-  
 
   let confirmSection = document.querySelector('.confirm');
   confirmSection.style.display = 'block';
 
-  
-}
-
-function confirmHide() {
   let confirmLayer = document.querySelector('.confirm__layer');
+<<<<<<< Updated upstream
   let confirmContents = document.querySelector('.confirm__contents');
+=======
+>>>>>>> Stashed changes
   confirmLayer.addEventListener('click', function(event) {
     event.preventDefault();
     event.stopPropagation();
+  });
+
     let target = event.target;
+<<<<<<< Updated upstream
     let confirmSection = document.querySelector('.confirm');
+=======
+>>>>>>> Stashed changes
     if (!confirmContents.contains(target)) {
       confirmSection.style.display = 'none';
     }
-  });
-  
-  
-
-  window.removeEventListener('click', confirmHide);
-
 }
 
 
@@ -179,13 +177,95 @@ optionNames.forEach(optionName => {
   });
 });
 
+<<<<<<< Updated upstream
 
+=======
+let officeOptions = document.querySelectorAll('input[name="office"]');
+officeOptions.forEach(function(option) {
+  option.addEventListener('change', calculateTotalPrice);
+});
+
+let securityOptions = document.querySelectorAll('input[name="security"]');
+securityOptions.forEach(function(option) {
+  option.addEventListener('change', calculateTotalPrice);
+});
+
+let cpuOptions = document.querySelectorAll('input[name="cpu"]');
+cpuOptions.forEach(function(option) {
+  option.addEventListener('change', calculateTotalPrice);
+})
+
+let fanOptions = document.querySelectorAll('input[name="fan"]');
+fanOptions.forEach(function(option) {
+  option.addEventListener('change', calculateTotalPrice);
+})
+
+let greaseOptions = document.querySelectorAll('input[name="grease"]');
+greaseOptions.forEach(function(option) {
+  option.addEventListener('change', calculateTotalPrice);
+})
+
+let graphicOptions = document.querySelectorAll('input[name="graphic"]');
+graphicOptions.forEach(function(option) {
+  option.addEventListener('change', calculateTotalPrice);
+})
+
+let powerOptions = document.querySelectorAll('input[name="power"]');
+powerOptions.forEach(function(option) {
+  option.addEventListener('change', calculateTotalPrice);
+})
+let memoryOptions = document.querySelectorAll('input[name="memory"]');
+memoryOptions.forEach(function(option) {
+  option.addEventListener('change', calculateTotalPrice);
+})
+let ssdOptions = document.querySelectorAll('input[name="ssd"]');
+ssdOptions.forEach(function(option) {
+  option.addEventListener('change', calculateTotalPrice);
+})
+let harddiskOptions = document.querySelectorAll('input[name="harddisk"]');
+harddiskOptions.forEach(function(option) {
+  option.addEventListener('change', calculateTotalPrice);
+})
+let addhardOptions = document.querySelectorAll('input[name="addhard"]');
+addhardOptions.forEach(function(option) {
+  option.addEventListener('change', calculateTotalPrice);
+})
+let driveOptions = document.querySelectorAll('input[name="drive"]');
+driveOptions.forEach(function(option) {
+  option.addEventListener('change', calculateTotalPrice);
+})
+let soundOptions = document.querySelectorAll('input[name="sound"]');
+soundOptions.forEach(function(option) {
+  option.addEventListener('change', calculateTotalPrice);
+})
+let caseOptions = document.querySelectorAll('input[name="case"]');
+caseOptions.forEach(function(option) {
+  option.addEventListener('change', calculateTotalPrice);
+})
+let rearOptions = document.querySelectorAll('input[name="rear"]');
+rearOptions.forEach(function(option) {
+  option.addEventListener('change', calculateTotalPrice);
+})
+let topfrontOptions = document.querySelectorAll('input[name="topfront"]');
+topfrontOptions.forEach(function(option) {
+  option.addEventListener('change', calculateTotalPrice);
+})
+let toprearOptions = document.querySelectorAll('input[name="toprear"]');
+toprearOptions.forEach(function(option) {
+  option.addEventListener('change', calculateTotalPrice);
+})
+let lanOptions = document.querySelectorAll('input[name="lan"]');
+lanOptions.forEach(function(option) {
+  option.addEventListener('change', calculateTotalPrice);
+})
+let wirelessOptions = document.querySelectorAll('input[name="wireless"]');
+wirelessOptions.forEach(function(option) {
+  option.addEventListener('change', calculateTotalPrice);
+})
+>>>>>>> Stashed changes
 
 const orderBtn = document.querySelector('.order-btn');
 orderBtn.addEventListener('click', confirmShow);
-const layer = document.querySelector('.confirm__layer');
-layer.addEventListener('click', confirmHide);
-
 
 
 
