@@ -415,6 +415,7 @@
     <section class="confirm">
       <div class="confirm__layer">
         <div class="confirm__contents">
+          <h3 class="confirm__ttl">カスタマイズ内容の確認</h3>
         </div>
       </div>
     </section>
@@ -428,11 +429,30 @@
     <div class="overlay" id="overlay"></div>
 
   </div>
+  <input type="button" id="button" value="button"/>
+    <br/>
+    <div id="text"></div>
   <!-- <script type="module" src="./js/index.js"></script> -->
   <script type="module" src="./js/jquery.js"></script>
   <script
   src="https://code.jquery.com/jquery-3.7.1.min.js"
   integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
   crossorigin="anonymous"></script>
+  <script>
+    $(function() {
+      $('#button').click(
+        function() {
+          $.ajax({
+            url: 'data.json',
+            dataType: 'json'
+          }).done(function(html) {
+            $('#text').html(os);
+          }).fail(function() {
+            alert('error');
+          });
+        }
+      );
+    });
+  </script>
 </body>
 </html>
