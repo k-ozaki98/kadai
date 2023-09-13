@@ -13,130 +13,358 @@
     ],
 
     "officeOptions": [
-      { "id": "512gb", "name": "Office なし", "price": 0 },
-      { "id": "1tb", "name": "Microsoft(R) Office Personal 2021 (Word/Excel/Outlook)", "price": 22000 },
-      { "id": "2tb", "name": "2Microsoft(R) Office Home and Business 2021 (Word/Excel/PowerPoint/Outlook) 《オススメ》", "price": 27500 },
-      { "id": "profeddional", "name": "Microsoft(R) Office Professional 2021 (Word/Excel/PowerPoint/Outlook/Access/Publisher)", "price": 53900 },
-      { "id": "kingsoft", "name": "KINGSOFT WPS Office 2 (ワープロ/表計算/プレゼンテーション)", "price": 3080 }
+      { 
+        "id": "512gb", 
+        "name": "Office なし", 
+        "price": 0 
+    },
+      { 
+        "id": "1tb", 
+        "name": "Microsoft(R) Office Personal 2021 (Word/Excel/Outlook)", 
+        "price": 22000 
+    },
+      { 
+        "id": "2tb", 
+        "name": "2Microsoft(R) Office Home and Business 2021 (Word/Excel/PowerPoint/Outlook) 《オススメ》", 
+        "price": 27500 },
+      { 
+        "id": "profeddional", 
+        "name": "Microsoft(R) Office Professional 2021 (Word/Excel/PowerPoint/Outlook/Access/Publisher)", 
+        "price": 53900 
+    },
+      { 
+        "id": "kingsoft", 
+        "name": "KINGSOFT WPS Office 2 (ワープロ/表計算/プレゼンテーション)", 
+        "price": 3080 
+    }
     ],
 
     "cpuOptions": [
-      { "id": "core", "name": "インテル Core i7-13700F (2.10GHz-5.20GHz/16コア/24スレッド)", "price": 0 },
-      { "id": "1tb", "name": "インテル Core i7-13700 (2.10GHz-5.20GHz/16コア/24スレッド/UHDグラフィックス770)", "price": 4900 }
+      { 
+        "id": "core", 
+        "name": "インテル Core i7-13700F (2.10GHz-5.20GHz/16コア/24スレッド)", 
+        "price": 0 
+    },
+      { 
+        "id": "1tb", 
+        "name": "インテル Core i7-13700 (2.10GHz-5.20GHz/16コア/24スレッド/UHDグラフィックス770)", 
+        "price": 4900 
+    }
     ],
 
     "securityOptions": [
-      { "id": "security01", "name": "sノートンセキュリティ スタンダード30日版プリインストール【更新特典付】", "price": 0 },
-      { "id": "security02", "name": "ノートン360スタンダードプラス1 【1年版 自動更新】【プロダクトキー/チラシ同梱】", "price": 22000 },
-      { "id": "security03", "name": "ノートンセキュリティ スタンダード30日版プリインストール【更新特典付】+ ノートン ID アドバイザー【1年 バンドル版】", "price": 27500 },
-      { "id": "security04", "name": "ノートン360スタンダードプラス1 【1年版 自動更新】【プロダクトキー/チラシ同梱】+ ノートン ID アドバイザー【1年 バンドル版】", "price": 53900 }
+      { 
+        "id": "security01", 
+        "name": "sノートンセキュリティ スタンダード30日版プリインストール【更新特典付】", 
+        "price": 0 
+    },
+      { 
+        "id": "security02", 
+        "name": "ノートン360スタンダードプラス1 【1年版 自動更新】【プロダクトキー/チラシ同梱】", 
+        "price": 22000 
+    },
+      { 
+        "id": "security03", 
+        "name": "ノートンセキュリティ スタンダード30日版プリインストール【更新特典付】+ ノートン ID アドバイザー【1年 バンドル版】", 
+        "price": 27500 
+    },
+      { 
+        "id": "security04", 
+        "name": "ノートン360スタンダードプラス1 【1年版 自動更新】【プロダクトキー/チラシ同梱】+ ノートン ID アドバイザー【1年 バンドル版】", 
+        "price": 53900 
+    }
     ],
 
     "fanOptions": [
-      { "id": "fan01", "name": "(空冷式) 静音パックまんぞくコース", "price": 0 },
-      { "id": "fan02", "name": "(空冷式) DEEPCOOL AK400", "price": 3500 },
-      { "id": "fan03", "name": "(空冷式) Scythe 虎徹 Mark3", "price": 4000 },
-      { "id": "fan04", "name": "(水冷式) DEEPCOOL GAMMAXX L240 V2 (RGBライティング対応)", "price": 8900 },
-      { "id": "fan05", "name": "(水冷式) ASETEK 624S-M2 (240mm/高速ファン搭載) (非発光)", "price": 10000 },
-      { "id": "fan06", "name": "(水冷式) DEEPCOOL LS520 (ARGBライティング対応)", "price": 11900 }
+      { 
+        "id": "fan01", 
+        "name": "(空冷式) 静音パックまんぞくコース", 
+        "price": 0 
+    },
+      { 
+        "id": "fan02", 
+        "name": "(空冷式) DEEPCOOL AK400", 
+        "price": 3500 
+    },
+      { 
+        "id": "fan03", 
+        "name": "(空冷式) Scythe 虎徹 Mark3", 
+        "price": 4000 },
+      { 
+        "id": "fan04", 
+        "name": "(水冷式) DEEPCOOL GAMMAXX L240 V2 (RGBライティング対応)", 
+        "price": 8900 },
+      { 
+        "id": "fan05", 
+        "name": "(水冷式) ASETEK 624S-M2 (240mm/高速ファン搭載) (非発光)", 
+        "price": 10000 },
+      { 
+        "id": "fan06", 
+        "name": "(水冷式) DEEPCOOL LS520 (ARGBライティング対応)", 
+        "price": 11900 }
     ],
     "greaseOptions": [
-      { "id": "grease01", "name": "ノーマルグリス熱伝導率: 0.8W/m･K程度", "price": 0 },
-      { "id": "grease02", "name": "(熱伝導率: 9.0W/m・K) シルバーグリス(AINEX AS-05)", "price": 1800 },
-      { "id": "grease03", "name": "(熱伝導率: 12.5W/m・K) Thermal Grizzly Kryonaut (TG-K-001-RS)", "price": 1900 },
-      { "id": "grease04", "name": "(熱伝導率: 12.56W/m・K) ナノダイヤモンドグリス (OC7) ", "price": 2000 },
-      { "id": "grease05", "name": "(熱伝導率: 13.2W/m・K) OC Master (SMZ-01R)", "price": 2500 },
-      { "id": "grease06", "name": "(熱伝導率: 14.2W/m・K) Thermal Grizzly Kryonaut Extreme (TG-KE-002-R)", "price": 3500 }
+      { 
+        "id": "grease01", 
+        "name": "ノーマルグリス熱伝導率: 0.8W/m･K程度", 
+        "price": 0 },
+      { 
+        "id": "grease02", 
+        "name": "(熱伝導率: 9.0W/m・K) シルバーグリス(AINEX AS-05)", 
+        "price": 1800 },
+      { 
+        "id": "grease03", 
+        "name": "(熱伝導率: 12.5W/m・K) Thermal Grizzly Kryonaut (TG-K-001-RS)", 
+        "price": 1900 },
+      { 
+        "id": "grease04", 
+        "name": "(熱伝導率: 12.56W/m・K) ナノダイヤモンドグリス (OC7) ", 
+        "price": 2000 },
+      { 
+        "id": "grease05", 
+        "name": "(熱伝導率: 13.2W/m・K) OC Master (SMZ-01R)", 
+        "price": 2500 },
+      { 
+        "id": "grease06", 
+        "name": "(熱伝導率: 14.2W/m・K) Thermal Grizzly Kryonaut Extreme (TG-KE-002-R)", 
+        "price": 3500 }
     ],
 
     "graphicOptions": [
-      { "id": "graphic01", "name": "NVIDIA GeForce RTX 4060 Ti 8GB (HDMI x1，DisplayPort x3)", "price": 0 }
+      { 
+        "id": "graphic01", 
+        "name": "NVIDIA GeForce RTX 4060 Ti 8GB (HDMI x1，DisplayPort x3)", 
+        "price": 0 }
     ],
 
     "powerOptions": [
-      { "id": "power01", "name": "50W 電源 (80PLUS BRONZE)", "price": 0 },
-      { "id": "power02", "name": "750W 電源 (80PLUS GOLD)", "price": 6000 },
-      { "id": "power03", "name": "750W 電源 (80PLUS PLATINUM) SILVERSTONE", "price": 8900 },
-      { "id": "power04", "name": "750W 電源 (80PLUS GOLD) Seasonic", "price": 19900 },
-      { "id": "power05", "name": "800W 電源 (80PLUS TITANIUM) Enhance 《オススメ》", "price": 11000 },
-      { "id": "power06", "name": "850W 電源 (80PLUS GOLD)", "price": 11000 }
+      { 
+        "id": "power01", 
+        "name": "50W 電源 (80PLUS BRONZE)", 
+        "price": 0 },
+      { 
+        "id": "power02", 
+        "name": "750W 電源 (80PLUS GOLD)", 
+        "price": 6000 },
+      { 
+        "id": "power03", 
+        "name": "750W 電源 (80PLUS PLATINUM) SILVERSTONE", 
+        "price": 8900 },
+      { 
+        "id": "power04", 
+        "name": "750W 電源 (80PLUS GOLD) Seasonic", 
+        "price": 19900 },
+      { 
+        "id": "power05", 
+        "name": "800W 電源 (80PLUS TITANIUM) Enhance 《オススメ》", 
+        "price": 11000 },
+      { 
+        "id": "power06", 
+        "name": "850W 電源 (80PLUS GOLD)", 
+        "price": 11000 }
     ],
     "memoryOptions": [
-      { "id": "memory01", "name": "16GB (8GBx2) (DDR4-3200)", "price": 0 },
-      { "id": "memory02", "name": "16GB (8GBx2) (DDR4-3200) SAMSUNG", "price": 3000 },
-      { "id": "memory03", "name": "32GB (16GBx2) (DDR4-3200) 《オススメ》", "price": 14000 },
-      { "id": "memory04", "name": "32GB (16GBx2) (DDR4-3200) SAMSUNG", "price": 18000 },
-      { "id": "memory05", "name": "64GB (32GBx2) (DDR4-3200)", "price": 18000 },
-      { "id": "memory06", "name": "64GB (32GBx2) (DDR4-3200) SAMSUNG", "price": 41000 }
+      { 
+        "id": "memory01", 
+        "name": "16GB (8GBx2) (DDR4-3200)", 
+        "price": 0 },
+      { 
+        "id": "memory02", 
+        "name": "16GB (8GBx2) (DDR4-3200) SAMSUNG", 
+        "price": 3000 },
+      { 
+        "id": "memory03", 
+        "name": "32GB (16GBx2) (DDR4-3200) 《オススメ》", 
+        "price": 14000 },
+      { 
+        "id": "memory04", 
+        "name": "32GB (16GBx2) (DDR4-3200) SAMSUNG", 
+        "price": 18000 },
+      { 
+        "id": "memory05", 
+        "name": "64GB (32GBx2) (DDR4-3200)", 
+        "price": 18000 },
+      { 
+        "id": "memory06", 
+        "name": "64GB (32GBx2) (DDR4-3200) SAMSUNG", 
+        "price": 41000 }
     ],
 
     "ssdOptions": [
-      { "id": "ssd01", "name": "1TB SSD (NVMe Gen3)", "price": 0 },
-      { "id": "ssd02", "name": "1TB SSD (NVMe Gen4)", "price": 5000 },
-      { "id": "ssd03", "name": "1TB SSD (NVMe Gen4) Crucial (読込速度 6600MB/s,書込速度 5000MB/s)", "price": 7500 },
-      { "id": "ssd04", "name": "1TB SSD (NVMe Gen4) Samsung (読込速度 7000MB/s,書込速度 5000MB/s)", "price": 11000 },
-      { "id": "ssd05", "name": "1TB SSD (NVMe Gen4) Seagate (読込速度 7300MB/s,書込速度 6000MB/s)", "price": 13500 },
-      { "id": "ssd06", "name": "1TB SSD (NVMe Gen4) WD (読込速度 7300MB/s,書込速度 6300MB/s)", "price": 13800 }
+      { 
+        "id": "ssd01", 
+        "name": "1TB SSD (NVMe Gen3)", 
+        "price": 0 },
+      { 
+        "id": "ssd02", 
+        "name": "1TB SSD (NVMe Gen4)", 
+        "price": 5000 },
+      { 
+        "id": "ssd03", 
+        "name": "1TB SSD (NVMe Gen4) Crucial (読込速度 6600MB/s,書込速度 5000MB/s)", 
+        "price": 7500 },
+      { 
+        "id": "ssd04", 
+        "name": "1TB SSD (NVMe Gen4) Samsung (読込速度 7000MB/s,書込速度 5000MB/s)", 
+        "price": 11000 },
+      { 
+        "id": "ssd05", 
+        "name": "1TB SSD (NVMe Gen4) Seagate (読込速度 7300MB/s,書込速度 6000MB/s)", 
+        "price": 13500 },
+      { 
+        "id": "ssd06", 
+        "name": "1TB SSD (NVMe Gen4) WD (読込速度 7300MB/s,書込速度 6300MB/s)", 
+        "price": 13800 }
     ],
 
     "harddiskOptions": [
-      { "id": "harddisk01", "name": "追加ストレージ 無し", "price": 0 },
-      { "id": "harddisk02", "name": "1TB SSD (NVMe Gen3) + ヒートシンク", "price": 10000 },
-      { "id": "harddisk03", "name": "1TB SSD (NVMe Gen4) + ヒートシンク", "price": 13000 },
-      { "id": "harddisk04", "name": "2TB SSD (NVMe Gen3) + ヒートシンク", "price": 17000 },
-      { "id": "harddisk05", "name": "2TB SSD (NVMe Gen4) + ヒートシンク", "price": 24000 },
-      { "id": "harddisk06", "name": "4TB SSD (NVMe Gen4) + ヒートシンク", "price": 42000 }
+      { 
+        "id": "harddisk01", 
+        "name": "追加ストレージ 無し", 
+        "price": 0 },
+      { 
+        "id": "harddisk02", 
+        "name": "1TB SSD (NVMe Gen3) + ヒートシンク", 
+        "price": 10000 },
+      { 
+        "id": "harddisk03", 
+        "name": "1TB SSD (NVMe Gen4) + ヒートシンク", 
+        "price": 13000 },
+      { 
+        "id": "harddisk04", 
+        "name": "2TB SSD (NVMe Gen3) + ヒートシンク", 
+        "price": 17000 },
+      { 
+        "id": "harddisk05", 
+        "name": "2TB SSD (NVMe Gen4) + ヒートシンク", 
+        "price": 24000 },
+      { 
+        "id": "harddisk06", 
+        "name": "4TB SSD (NVMe Gen4) + ヒートシンク", 
+        "price": 42000 }
     ],
 
     "addhardOptions": [
-      { "id": "addhard01", "name": "追加ストレージ1 無し", "price": 0 },
-      { "id": "addhard02", "name": "2TB HDD", "price": 8500 },
-      { "id": "addhard03", "name": "4TB HDD", "price": 12500 },
-      { "id": "addhard04", "name": "8TB HDD", "price": 22000 },
-      { "id": "addhard05", "name": "8TB HDD (WD Red Plus)", "price": 19000 },
-      { "id": "addhard06", "name": "8TB HDD (WD Red Plus)", "price": 33000 }
+      { 
+        "id": "addhard01", 
+        "name": "追加ストレージ1 無し", 
+        "price": 0 },
+      { 
+        "id": "addhard02", 
+        "name": "2TB HDD", 
+        "price": 8500 },
+      { 
+        "id": "addhard03", 
+        "name": "4TB HDD", 
+        "price": 12500 },
+      { 
+        "id": "addhard04", 
+        "name": "8TB HDD", 
+        "price": 22000 },
+      { 
+        "id": "addhard05", 
+        "name": "8TB HDD (WD Red Plus)", 
+        "price": 19000 },
+      { 
+        "id": "addhard06", 
+        "name": "8TB HDD (WD Red Plus)", 
+        "price": 33000 }
     ],
 
     "driveOptions": [
-      { "id": "drive01", "name": "光学ドライブ無し (※カスタマイズで選択可能)", "price": 0 },
-      { "id": "drive02", "name": "DVDスーパーマルチドライブ (DVD±R DL 対応)", "price": 3000 },
-      { "id": "drive03", "name": "Blu-rayドライブ (BD-XL 対応) 《オススメ》", "price": 9500 },
-      { "id": "drive04", "name": "Pioneer Blu-rayドライブ (BDR-212XJBK/WS BD-XL 対応)", "price": 16000 },
-      { "id": "drive05", "name": "DVD-ROMドライブ", "price": 3300 }
+      { 
+        "id": "drive01", 
+        "name": "光学ドライブ無し (※カスタマイズで選択可能)", 
+        "price": 0 },
+      { 
+        "id": "drive02", 
+        "name": "DVDスーパーマルチドライブ (DVD±R DL 対応)", 
+        "price": 3000 },
+      { 
+        "id": "drive03", 
+        "name": "Blu-rayドライブ (BD-XL 対応) 《オススメ》", 
+        "price": 9500 },
+      { 
+        "id": "drive04", 
+        "name": "Pioneer Blu-rayドライブ (BDR-212XJBK/WS BD-XL 対応)", 
+        "price": 16000 },
+      { 
+        "id": "drive05", 
+        "name": "DVD-ROMドライブ", 
+        "price": 3300 }
     ],
 
     "soundOptions": [
-      { "id": "sound01", "name": "マザーボード 標準 オンボードHDサウンド", "price": 0 }
+      { 
+        "id": "sound01", 
+        "name": "マザーボード 標準 オンボードHDサウンド", 
+        "price": 0 }
     ],
 
     "caseOptions": [
-      { "id": "case01", "name": "ガレリア専用 SKケース (ATX) プレミアム(アルミヘアライン外装)", "price": 10000 },
-      { "id": "case02", "name": "ガレリア専用 SKケース (ATX) スタンダード(ガンメタリック)", "price": 0 }
+      { 
+        "id": "case01", 
+        "name": "ガレリア専用 SKケース (ATX) プレミアム(アルミヘアライン外装)", 
+        "price": 10000 },
+      { 
+        "id": "case02", 
+        "name": "ガレリア専用 SKケース (ATX) スタンダード(ガンメタリック)", 
+        "price": 0 }
     ],
 
     "rearOptions": [
-      { "id": "rear01", "name": "14cm 静音ケースファン", "price": 0 },
-      { "id": "rear02", "name": "14cm 高速ケースファン", "price": 2000 }
+      { 
+        "id": "rear01", 
+        "name": "14cm 静音ケースファン", 
+        "price": 0 },
+      { 
+        "id": "rear02", 
+        "name": "14cm 高速ケースファン", 
+        "price": 2000 }
     ],
 
     "topfrontOptions": [
-      { "id": "topfront01", "name": "トップケースファン前部なし", "price": 0 },
-      { "id": "topfront02", "name": "14cm 静音ケースファン", "price": 1500 },
-      { "id": "topfront03", "name": "14cm 高速ケースファン", "price": 2200 }
+      { 
+        "id": "topfront01", 
+        "name": "トップケースファン前部なし", 
+        "price": 0 },
+      { 
+        "id": "topfront02", 
+        "name": "14cm 静音ケースファン", 
+        "price": 1500 },
+      { 
+        "id": "topfront03", 
+        "name": "14cm 高速ケースファン", 
+        "price": 2200 }
     ],
 
     "toprearOptions": [
-      { "id": "toprear01", "name": "14cm 静音ケースファン", "price": 0 },
-      { "id": "toprear02", "name": "14cm 高速ケースファン", "price": 2000 }
+      { 
+        "id": "toprear01", 
+        "name": "14cm 静音ケースファン", 
+        "price": 0 },
+      { 
+        "id": "toprear02", 
+        "name": "14cm 高速ケースファン", 
+        "price": 2000 }
     ],
 
     "lanOptions": [
-      { "id": "lan01", "name": "2.5Gb 対応LANポート×1(オンボード)", "price": 0 }
+      { 
+        "id": "lan01", 
+        "name": "2.5Gb 対応LANポート×1(オンボード)", 
+        "price": 0 }
     ],
 
     "wirelessOptions": [
-      { "id": "wireless01", "name": "無線LAN子機 無し", "price": 0 },
-      { "id": "wireless02", "name": "Wi-Fi6+Bluetooth(R)5.2対応 無線LANカード《オススメ》", "price": 8000 }
+      { 
+        "id": "wireless01", 
+        "name": "無線LAN子機 無し", 
+        "price": 0 },
+      { 
+        "id": "wireless02", 
+        "name": "Wi-Fi6+Bluetooth(R)5.2対応 無線LANカード《オススメ》", 
+        "price": 8000 }
     ]
   }
   
