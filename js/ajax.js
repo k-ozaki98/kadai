@@ -10,13 +10,9 @@ $(document).ready(function() {
     function(optionsData) {
       console.log(optionsData);
 
-      const optionNames = [
-        'os', 'office', 'security', 'cpu', 'fan', 'grease', 'graphic', 'power', 'memory',
-        'ssd', 'harddisk', 'addhard', 'drive', 'sound', 'case', 'rear', 'topfront',
-        'toprear', 'lan', 'wireless'
-      ];
+      const optionNames = optionsData.optionNames;
 
-      // 共通の関数を作成してオプションを生成
+      // オプション生成
       optionNames.forEach(optionName => {
         generateOptions(optionsData[`${optionName}Options`], optionName, optionName);
       });
@@ -39,9 +35,10 @@ $(document).ready(function() {
         $('.product').eq(index).addClass('is-show');
       }
 
+      // radio, label生成
       function generateOptions(optionData, sectionClassName, inputName) {
         const section = $(`.${sectionClassName}`);
-    
+
         optionData.forEach((option, index) => { 
           const div = $('<div>').addClass(`${sectionClassName}__${option.id}`);
           const input = $('<input>').attr({
@@ -52,27 +49,30 @@ $(document).ready(function() {
             'data-price': option.price,
             'data-img': option.image,
           });
-        
+          
+          // 最初の項目を選択しとく
           if (index === 0) { 
             input.prop('checked', true);
           }
+
+          // 画像生成
           const imgWrap = $('<div>').addClass('image-wrap');
-          imgWrap.html(`${option.image}`);
-          const label = $('<label>').attr('for', option.id).html(`${imgWrap}${option.name}<span class="plusprice">+ ${option.price}円</span>`);
+          const img = $('<img>').attr('src', option.image);
+          imgWrap.append(img);
+
+          const label = $('<label>').attr('for', option.id).append(imgWrap, option.name, `<span class="plusprice">+ ${option.price}円</span>`);
         
           div.append(input, label);
           section.append(div);
         });
       }
+
     
       // 合計金額計算
       function calculateTotalPrice() {
         totalPrice = 100000; 
     
-        const checkNames = [
-          'os', 'office', 'security', 'cpu', 'fan', 'grease', 'graphic', 'power', 'memory', 'ssd',
-          'harddisk', 'addhard', 'drive', 'sound', 'case', 'rear', 'topfront', 'toprear', 'lan', 'wireless'
-        ];
+        const checkNames = optionsData.optionNames;
     
         checkNames.forEach(checkName => {
           const checkboxes = $(`input[name="${checkName}"]:checked`);
@@ -90,16 +90,14 @@ $(document).ready(function() {
         const confirmContents = $('.confirm__contents');
         confirmContents.empty();
     
-        const checkNames = [
-          'os', 'office', 'security', 'cpu', 'fan', 'grease', 'graphic', 'power', 'memory', 'ssd',
-          'harddisk', 'addhard', 'drive', 'sound', 'case', 'rear', 'topfront', 'toprear', 'lan', 'wireless'
-        ];
+        const checkNames = optionsData.optionNames;
     
         checkNames.forEach(function(checkName) {
           const checkbox = $(`input[name="${checkName}"]:checked + label`);
+          const sectionText = $(`.${checkName} h3`).text();
           confirmContents.append(`
             <dl>
-              <dt>${checkName}</dt>
+              <dt>${sectionText}</dt>
               <dd class="select-${checkName}">${checkbox.text()}</dd>
             </dl>
           `);
@@ -110,7 +108,7 @@ $(document).ready(function() {
         $('.confirm').css('display', 'block');
       });
     
-      // 注文確認画面を非表示
+      // 確認画面を非表示
       $('.confirm__layer').on('click', function(event) {
         event.preventDefault();
         event.stopPropagation();
@@ -131,5 +129,6 @@ $(document).ready(function() {
     }
     );
 
-    // input　label生成
 });
+
+

@@ -1,40 +1,48 @@
 {
+    "optionNames": [
+      "os", "office", "security", "cpu", "fan", "grease", "graphic", "power", "memory",
+      "ssd", "harddisk", "addhard", "drive", "sound", "case", "rear", "topfront",
+      "toprear", "lan", "wireless"
+    ],
+    
     "osOptions": [
       { 
-        "id": "8gb", 
+        "id": "0s01", 
         "name": "Windows 11 Home 64ビット", 
-        "price": 0 
+        "price": 0,
+        "image": "./img/os-01.jpg"
       },
       { 
-        "id": "16gb", 
+        "id": "os02", 
       "name": "Windows 11 Pro 64ビット", 
-      "price": 7000
+      "price": 7000,
+      "image": "./img/os-02.jpg"
       }
     ],
 
     "officeOptions": [
       { 
-        "id": "512gb", 
+        "id": "office01", 
         "name": "Office なし", 
         "price": 0 
       },
       { 
-        "id": "1tb", 
+        "id": "office02", 
         "name": "Microsoft(R) Office Personal 2021 (Word/Excel/Outlook)", 
         "price": 22000 
       },
       { 
-        "id": "2tb", 
+        "id": "office03", 
         "name": "2Microsoft(R) Office Home and Business 2021 (Word/Excel/PowerPoint/Outlook) 《オススメ》", 
         "price": 27500 
       },
       { 
-        "id": "profeddional", 
+        "id": "office04", 
         "name": "Microsoft(R) Office Professional 2021 (Word/Excel/PowerPoint/Outlook/Access/Publisher)", 
         "price": 53900 
       },
       { 
-        "id": "kingsoft", 
+        "id": "office05", 
         "name": "KINGSOFT WPS Office 2 (ワープロ/表計算/プレゼンテーション)", 
         "price": 3080 
       }
@@ -42,12 +50,12 @@
 
     "cpuOptions": [
       { 
-        "id": "coreF", 
+        "id": "core01", 
         "name": "インテル Core i7-13700F (2.10GHz-5.20GHz/16コア/24スレッド)", 
         "price": 0 
       },
       { 
-        "id": "core", 
+        "id": "core02", 
         "name": "インテル Core i7-13700 (2.10GHz-5.20GHz/16コア/24スレッド/UHDグラフィックス770)", 
         "price": 4900 
       }

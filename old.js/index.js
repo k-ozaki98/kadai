@@ -174,9 +174,7 @@ optionNames.forEach(optionName => {
   });
 });
 
-<<<<<<< Updated upstream
 
-=======
 let officeOptions = document.querySelectorAll('input[name="office"]');
 officeOptions.forEach(function(option) {
   option.addEventListener('change', calculateTotalPrice);
@@ -259,7 +257,6 @@ let wirelessOptions = document.querySelectorAll('input[name="wireless"]');
 wirelessOptions.forEach(function(option) {
   option.addEventListener('change', calculateTotalPrice);
 })
->>>>>>> Stashed changes
 
 const orderBtn = document.querySelector('.order-btn');
 orderBtn.addEventListener('click', confirmShow);
