@@ -44,11 +44,11 @@ $(document).ready(function() {
     }
   });
 
-  // 共通の関数を作成してオプションを生成
+
   function generateOptions(optionData, sectionClassName, inputName) {
     const section = $(`.${sectionClassName}`);
 
-    optionData.forEach(option => {
+    optionData.forEach((option, index) => { 
       const div = $('<div>').addClass(`${sectionClassName}__${option.id}`);
       const input = $('<input>').attr({
         type: 'radio',
@@ -56,17 +56,22 @@ $(document).ready(function() {
         name: inputName,
         value: option.id,
         'data-price': option.price,
-      }).prop('checked', option.checked);
+      });
+    
+      if (index === 0) { 
+        input.prop('checked', true);
+      }
+    
       const label = $('<label>').attr('for', option.id).html(`${option.name}<span class="plusprice">+ ${option.price}円</span>`);
-
+    
       div.append(input, label);
       section.append(div);
     });
   }
 
-  // 合計金額を計算する関数
+  // 合計金額計算
   function calculateTotalPrice() {
-    totalPrice = 100000; // 初期値を設定
+    totalPrice = 100000; 
 
     const checkNames = [
       'os', 'office', 'security', 'cpu', 'fan', 'grease', 'graphic', 'power', 'memory', 'ssd',
@@ -84,7 +89,7 @@ $(document).ready(function() {
     return totalPrice;
   }
 
-  // 注文確認画面を表示
+  // 注文確認画面
   $('.order-btn').on('click', function() {
     const confirmContents = $('.confirm__contents');
     confirmContents.empty();
