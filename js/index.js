@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 
 
 let totalPrice = 100000;
@@ -10,8 +9,6 @@ function addTotalPrice(element) {
   }
 }
 
-=======
->>>>>>> Stashed changes
 function calculateTotalPrice() {
 
   const checkNames = [
