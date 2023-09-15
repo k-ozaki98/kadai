@@ -241,9 +241,9 @@ input[type="radio"]:checked + label {
     font-size: 35px;
   }
 }
-.order-btn {
+.order {
   width: 28%;
-  p {
+  input {
    background: #004da1;
    color: #fff;
    font-weight: bold;

@@ -83,17 +83,12 @@
           </section>
         </div>
         <div id="total-price" class="total">
-          <div class="btn-wrap">
-            <div class="keep-btn">
-              <a href="#">構成一時保存</a>
-            </div>
-            <div class="prev-btn">
-              <a href="#">商品詳細に戻る</a>
-            </div>
-          </div>
-          <p>商品合計:<span></span></p>
           <div class="order-btn">
             <p href="">確認</p>
+          </div>
+          <p>商品合計:<span></span></p>
+          <div class="order">
+            <input type="submit" name="submit"value="確認画面へ">
           </div>
         </div>
 
@@ -118,13 +113,13 @@
       </div>
     </section>
 
-    <div class="modal" id="myModal">
+    <!-- <div class="modal" id="myModal">
       <div class="confirm__contents">
         <span class="close" id="closeModal">&times;</span>
-        <!-- ダイアログのコンテンツをここに追加 -->
+        
       </div>
     </div>
-    <div class="overlay" id="overlay"></div>
+    <div class="overlay" id="overlay"></div> -->
 
   </div>
   <!-- <script type="module" src="./js/index.js"></script> -->

@@ -247,10 +247,10 @@ input[type=radio]:checked + label {
   font-size: 35px;
 }
 
-.order-btn {
+.order {
   width: 28%;
 }
-.order-btn p {
+.order input {
   background: #004da1;
   color: #fff;
   font-weight: bold;
@@ -327,3 +327,5 @@ input[type=radio]:checked + label {
   font-size: 33px;
   margin-left: 30px;
 }
+
+/*# sourceMappingURL=style.css.map */
