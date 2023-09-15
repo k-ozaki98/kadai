@@ -1,14 +1,3 @@
-
-
-let totalPrice = 100000;
-
-function addTotalPrice(element) {
-  if (element) {
-    let price = parseInt(element.dataset.price);
-    totalPrice += price;
-  }
-}
-
 function calculateTotalPrice() {
 
   const checkNames = [
@@ -144,20 +133,26 @@ function confirmShow() {
   confirmSection.style.display = 'block';
 
   let confirmLayer = document.querySelector('.confirm__layer');
+<<<<<<< Updated upstream:old.js/index.js
 <<<<<<< Updated upstream
   let confirmContents = document.querySelector('.confirm__contents');
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes:js/index.js
   confirmLayer.addEventListener('click', function(event) {
     event.preventDefault();
     event.stopPropagation();
   });
 
     let target = event.target;
+<<<<<<< Updated upstream:old.js/index.js
 <<<<<<< Updated upstream
     let confirmSection = document.querySelector('.confirm');
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes:js/index.js
     if (!confirmContents.contains(target)) {
       confirmSection.style.display = 'none';
     }
