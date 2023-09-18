@@ -1,15 +1,16 @@
 <?php
-session_start(); // セッションを開始
+session_start(); 
 
-// 選択内容をセッションから取得
+$data = file_get_contents('../data.json');
+$optionsData = json_decode($data, true);
+// 選択内容保存
+$_SESSION['selected_options'] = $_POST;
+
+// 選択内容を取得
 if (isset($_SESSION['selected_options'])) {
     $selectedOptions = $_SESSION['selected_options'];
-} else {
-    // セッションにデータがない場合の処理
-    // 何も選択されていない場合のデフォルト値を設定するなど
-}
+} 
 
-// 以下、選択内容を表示するコード
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -24,16 +25,13 @@ if (isset($_SESSION['selected_options'])) {
     <h2 class="sec-ttl">注文確認</h2>
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-      // フォームからのデータを処理し、選択した項目とタイトルを表示
-      $data = file_get_contents('../data.json');
-      $optionsData = json_decode($data, true);
-
-      $_SESSION['selected_options'] = $_POST;
+      
+      
 
       foreach ($_POST as $key => $value) {
         if (isset($optionsData[$key . 'Options'])) {
           $optionData = $optionsData[$key . 'Options'];
-          $sectionTitle = $optionsData['optionNames'][$key]; // セクションのタイトルを取得
+          $sectionTitle = $optionsData['optionNames'][$key]; 
 
           echo "<h3>{$sectionTitle}</h3>";
           foreach ($optionData as $option) {
@@ -41,7 +39,6 @@ if (isset($_SESSION['selected_options'])) {
               echo "<p class='confirm-name'>{$option['name']} ({$option['price']}円)</p>";
             }
           }
-          echo "</ul>";
         }
       }
     }
@@ -51,10 +48,8 @@ if (isset($_SESSION['selected_options'])) {
       <p>
         <?php
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-          // 合計金額を計算して表示
+          // 合計金額の計算
           $totalPrice = 0;
-          $data = file_get_contents('../data.json');
-          $optionsData = json_decode($data, true);
   
           foreach ($_POST as $key => $value) {
             if (isset($optionsData[$key . 'Options'])) {
