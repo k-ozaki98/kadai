@@ -1,22 +1,37 @@
 {
-    "optionNames": [
-      "os", "office", "security", "cpu", "fan", "grease", "graphic", "power", "memory",
-      "ssd", "harddisk", "addhard", "drive", "sound", "case", "rear", "topfront",
-      "toprear", "lan", "wireless"
-    ],
+  "optionNames": {
+    "os": "OS",
+    "office": "オフィスソフト",
+    "security": "セキュリティソフト",
+    "cpu": "CPU",
+    "fan": "CPUファン",
+    "grease": "CPUグリス",
+    "graphic": "グラフィック機能",
+    "power": "電源",
+    "memory": "メモリ",
+    "ssd": "SSD",
+    "harddisk": "ハードディスク",
+    "addhard": "追加ストレージ",
+    "drive": "光学ドライブ",
+    "sound": "サウンド",
+    "case": "ケース",
+    "rear": "リアケースファン",
+    "topfront": "トップケースファン前部",
+    "toprear": "トップケースファン後部",
+    "lan": "LAN",
+    "wireless": "無線LAN"
+  },
     
     "osOptions": [
       { 
         "id": "0s01", 
         "name": "Windows 11 Home 64ビット", 
-        "price": 0,
-        "image": "./img/os-01.jpg"
+        "price": 0
       },
       { 
         "id": "os02", 
       "name": "Windows 11 Pro 64ビット", 
-      "price": 7000,
-      "image": "./img/os-02.jpg"
+      "price": 7000
       }
     ],
 

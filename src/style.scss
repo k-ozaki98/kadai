@@ -241,9 +241,26 @@ input[type="radio"]:checked + label {
     font-size: 35px;
   }
 }
-.order {
+.order-btn {
   width: 28%;
-  input {
+  p {
+    background: orange;
+   color: #fff;
+   font-weight: bold;
+   font-size: 26px;
+   padding: 2rem;
+   height: 100%;
+   border: 2px solid orange;
+   transition: 0.15s;
+   cursor: pointer;
+   text-align: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+  }
+}
+.order-btn {
    background: #004da1;
    color: #fff;
    font-weight: bold;
@@ -257,13 +274,57 @@ input[type="radio"]:checked + label {
    display: flex;
    align-items: center;
    justify-content: center;
-   width: 100%;
- }
+   width: 40%;
+   margin: 0 auto 100px;
   
 }
 .total button:hover {
   color: #004da1;
   background: #fff;
+}
+
+.btn-wrap{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 100px;
+
+}
+
+.prev-btn {
+  width: 30%;
+  a {
+    background: orange;
+    color: #fff;
+    font-weight: bold;
+    font-size: 26px;
+    padding: 2rem;
+    height: 100%;
+    transition: 0.15s;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+}
+.complete-btn {
+  width: 30%;
+  a {
+    background: #004da1;
+    color: #fff;
+    font-weight: bold;
+    font-size: 26px;
+    padding: 2rem;
+    height: 100%;
+    transition: 0.15s;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
 }
 
 .confirm {
@@ -319,5 +380,33 @@ input[type="radio"]:checked + label {
         margin-left: 30px;
       }
     }
+  }
+}
+
+.sec-ttl {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 3rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.confirm-name {
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+.confirm-total {
+  display: flex;
+  justify-content: right;
+  margin-bottom: 40px;
+  h3 {
+    border-bottom: none;
+  }
+  p {
+    font-size: 25px;
+    color: #e43344;
+    font-weight: bold;
+    margin-left: 20px;
   }
 }
