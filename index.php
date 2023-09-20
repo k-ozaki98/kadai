@@ -9,6 +9,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST)) {
 }
 ?>
 
+<?php
+    $data = file_get_contents('data.json');
+
+    if ($data === false) {
+        // エラー処理
+        die('JSONデータの読み込みに失敗しました。');
+    }
+
+    // 配列に変換
+    $optionsData = json_decode($data, true);
+
+    if (json_last_error() !== JSON_ERROR_NONE) {
+        die('JSONデータの解析に失敗しました。');
+    }
+    
+  ?>
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -28,22 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST)) {
       <li class="product__item">内容確認</li>
     </ul>
 
-  <?php
-    $data = file_get_contents('data.json');
-
-    if ($data === false) {
-        // エラー処理
-        die('JSONデータの読み込みに失敗しました。');
-    }
-
-    // 配列に変換
-    $optionsData = json_decode($data, true);
-
-    if (json_last_error() !== JSON_ERROR_NONE) {
-        die('JSONデータの解析に失敗しました。');
-    }
-    
-  ?>
+  
 
   <section class="os">
     <h3>OS</h3>
