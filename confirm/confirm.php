@@ -11,6 +11,8 @@ if (isset($_SESSION['selected_options'])) {
     $selectedOptions = $_SESSION['selected_options'];
 } 
 
+require_once('../lib/function.php');
+
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -25,22 +27,9 @@ if (isset($_SESSION['selected_options'])) {
     <h2 class="sec-ttl">注文確認</h2>
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-      
-      
+      $selectedOptions = $_POST;
+      confirmOptions($selectedOptions, $optionsData);
 
-      foreach ($_POST as $key => $value) {
-        if (isset($optionsData[$key . 'Options'])) {
-          $optionData = $optionsData[$key . 'Options'];
-          $sectionTitle = $optionsData['optionNames'][$key]; 
-
-          echo "<h3>{$sectionTitle}</h3>";
-          foreach ($optionData as $option) {
-            if ($option['id'] === $value) {
-              echo "<p class='confirm-name'>{$option['name']} ({$option['price']}円)</p>";
-            }
-          }
-        }
-      }
     }
     ?>
     <div class="confirm-total">
