@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+console.log('aa')
   // データの取得
   $.ajax({
     url: "../data.json",
@@ -10,7 +10,7 @@ $(document).ready(function() {
     function(optionsData) {
       console.log(optionsData);
 
-      const optionNames = optionsData.optionNames;
+      const optionNames = Object.values(optionsData.optionNames);
 
       // オプション生成
       optionNames.forEach(optionName => {
