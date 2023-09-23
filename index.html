@@ -1,55 +1,22 @@
-<?php
-session_start();
-
-if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST)) {
-    // 選択内容保存
-    $_SESSION['selected_options'] = $_POST;
-    header("Location: /confirm/confirm.php"); 
-    exit();
-}
-?>
-
-
-<?php
-    $data = file_get_contents('data.json');
-
-    if ($data === false) {
-        // エラー処理
-        die('JSONデータの読み込みに失敗しました。');
-    }
-
-    // 配列に変換
-    $optionsData = json_decode($data, true);
-
-    if (json_last_error() !== JSON_ERROR_NONE) {
-        die('JSONデータの解析に失敗しました。');
-    }
-    
-  ?>
-
-  <?php
-    require_once('lib/function.php');
-  ?>
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="./css/style.css">
+
+  
 </head>
-<body>  
-  <form action="/confirm/confirm.php" method="POST">
+<body>
   <div class="l-inner">
-  <ul class="product__list">
+    <ul class="product__list">
       <li class="product__item is-active">本体構成</li>
       <li class="product__item">周辺機器</li>
       <li class="product__item">サービス</li>
       <li class="product__item">内容確認</li>
     </ul>
-
     <section class="product is-show">
       <h2 class="product__ttl">本体構成</h2>
       <div class="product__wrap">
@@ -156,12 +123,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST)) {
     </div>
     <div class="overlay" id="overlay"></div>
 
-  <button class="order-btn" type="submit">注文確認</button>
-
-</div> 
-</form>
-<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-<script src="/js/ajax.js"></script>
+  </div>
+  <input type="button" id="button" value="button"/>
+    <br/>
+    <div id="text"></div>
+  <!-- <script type="module" src="./js/index.js"></script> -->
+  <script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
+  <script src="./js/ajax.js"></script>
+  <!-- <script type="module" src="./js/jquery.js"></script> -->
 </body>
-</html>
-  
+</html>å
