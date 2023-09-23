@@ -70,7 +70,7 @@ console.log('aa')
     
       // 合計金額計算
       function calculateTotalPrice() {
-        totalPrice = 100000; 
+        totalPrice = 0; 
     
         const checkNames = optionsData.optionNames;
     
@@ -86,7 +86,7 @@ console.log('aa')
       }
     
       // 注文確認画面
-      $('.order-btn').on('click', function() {
+      $('.confirm-btn').on('click', function() {
         const confirmContents = $('.confirm__contents');
         confirmContents.empty();
     

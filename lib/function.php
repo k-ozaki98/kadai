@@ -34,10 +34,11 @@ function generateRadioOptions($optionsData, $selectedOptions, $inputName)  {
 <?php
 // 選択オプション表示
 function confirmOptions($selectedOptions, $optionsData) {
+    
     foreach ($selectedOptions as $key => $value) {
         if (isset($optionsData[$key . 'Options'])) {
             $optionData = $optionsData[$key . 'Options'];
-            $sectionTitle = $optionsData['optionNames'][$key]; 
+            $sectionTitle = $optionsData['sectionTitle'][$key]; 
 
             echo "<h3>{$sectionTitle}</h3>";
             foreach ($optionData as $option) {

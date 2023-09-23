@@ -24,49 +24,68 @@ require_once('../lib/function.php');
 </head>
 <body>
   <div class="l-inner">
-    <h2 class="sec-ttl">注文確認</h2>
-    <?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-      $selectedOptions = $_POST;
-      confirmOptions($selectedOptions, $optionsData);
+    <form action="../order/order.php" method="POST">
 
-    }
-    ?>
-    <div class="confirm-total">
-      <h3>合計金額:</h3>
-      <p>
+    
+        <h2 class="sec-ttl">基本情報</h2>
+        <div class="basic-info">
+          <label for="fullname">氏名</label>
+          <input type="text" id="fullname" name="fullname" require>
+        </div>
+        <div class="basic-info">
+          <label for="email">メールアドレス</label>
+          <input type="text" id="email" name="email" require>
+        </div>
+        <div class="basic-info">
+          <label for="tel">TEL</label>
+          <input type="tel" id="tel" name="tel" require>
+        </div>
+        <h2 class="sec-ttl">注文確認</h2>
+
+        
         <?php
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-          // 合計金額の計算
-          $totalPrice = 0;
-  
-          foreach ($_POST as $key => $value) {
-            if (isset($optionsData[$key . 'Options'])) {
-              $optionData = $optionsData[$key . 'Options'];
-              foreach ($optionData as $option) {
-                if ($option['id'] === $value) {
-                  $totalPrice += $option['price'];
-                }
-              }
-            }
-          }
-  
-          $formattedTotalPrice = number_format($totalPrice);
-          echo $formattedTotalPrice . "円";
+          $selectedOptions = $_POST;
+          confirmOptions($selectedOptions, $optionsData);
+
         }
         ?>
-      </p>
+        <div class="confirm-total">
+          <h3>合計金額:</h3>
+          <p>
+            <?php
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+              // 合計金額の計算
+              $totalPrice = 0;
+      
+              foreach ($_POST as $key => $value) {
+                if (isset($optionsData[$key . 'Options'])) {
+                  $optionData = $optionsData[$key . 'Options'];
+                  foreach ($optionData as $option) {
+                    if ($option['id'] === $value) {
+                      $totalPrice += $option['price'];
+                    }
+                  }
+                }
+              }
+      
+              $formattedTotalPrice = number_format($totalPrice);
+              echo $formattedTotalPrice . "円";
+            }
+            ?>
+          </p>
 
-    </div>
+        </div>
 
-    <div class="btn-wrap">
-      <div class="prev-btn">
-        <a href="/">戻る</a>
-      </div>
-      <div class="complete-btn">
-        <a href="/">発注する</a>
-      </div>
-    </div>
+        <div class="btn-wrap">
+          <div class="prev-btn">
+            <a href="/">戻る</a>
+          </div>
+          <div class="complete-btn">
+            <input type="submit" value="発注する">
+          </div>
+        </div>
+    </form>
   </div>
 </body>
 </html>

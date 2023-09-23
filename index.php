@@ -115,18 +115,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST)) {
         </section>
       </div>
       <div id="total-price" class="total">
-        <div class="btn-wrap">
-          <div class="keep-btn">
-            <a href="#">構成一時保存</a>
-          </div>
-          <div class="prev-btn">
-            <a href="#">商品詳細に戻る</a>
-          </div>
-        </div>
-        <p>商品合計:<span></span></p>
-        <div class="order-btn">
+        <div class="confirm-btn">
           <p href="">確認</p>
         </div>
+        <p>商品合計:<span></span></p>
+        <button class="order-btn" type="submit">注文確認</button>
+
       </div>
     </section>
 
@@ -156,7 +150,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST)) {
     </div>
     <div class="overlay" id="overlay"></div>
 
-  <button class="order-btn" type="submit">注文確認</button>
 
 </div> 
 </form>
