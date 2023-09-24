@@ -80,8 +80,13 @@ console.log('aa')
             totalPrice += parseInt($(this).data('price'));
           });
         });
+
+        const formattedTotalPrice = totalPrice.toLocaleString('ja-JP', {
+          style: 'currency',
+          currency: 'JPY',
+        });
     
-        $('.total p span').text(`${totalPrice}円`);
+        $('.total p span').text(formattedTotalPrice);
         return totalPrice;
       }
     
@@ -129,6 +134,20 @@ console.log('aa')
     }
     );
 
+});
+
+$.ajax({
+  url: "save_selection.php",
+  type: "POST",
+  data: {
+      selectedOptions: selectedOptions 
+  },
+  success: function(response) {
+      console.log('保存しました');
+  },
+  error: function(error) {
+      console.log('保存できませんでした');
+  }
 });
 
 

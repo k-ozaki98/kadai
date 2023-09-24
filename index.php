@@ -11,6 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST)) {
 
 
 <?php
+
     $data = file_get_contents('data.json');
 
     if ($data === false) {
