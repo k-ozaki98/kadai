@@ -27,31 +27,31 @@ if($file) {
   }
 
   // 遁択オプションの詳細情報を格納する変数
-$selectedOptionDetails = array();
+  $selectedOptionDetails = array();
 
-// CSVファイルに選択オプションと価格を書き込む
-foreach ($selectedOptions as $key => $value) {
-    if (isset($optionsData[$key . 'Options'])) {
-        $optionData = $optionsData[$key . 'Options'];
-        foreach ($optionData as $option) {
-            if ($option['id'] === $value) {
-                // オプション名、価格格納
-                $selectedOptionDetails[] = $option['name'] . " ({$option['price']}円)";
-            }
-        }
-    }
-}
-// カンマで区切る
-$selectedOptionsString = implode(", ", $selectedOptionDetails);
-  
-  fputcsv($file, array("",$fullname, $email, "\"$tel\"", $selectedOptionsString));
-  
-  fclose($file);
-  
-  echo "CSV ファイルに書き込まれました。";
+  // CSVファイルに選択オプションと価格を書き込む
+  foreach ($selectedOptions as $key => $value) {
+      if (isset($optionsData[$key . 'Options'])) {
+          $optionData = $optionsData[$key . 'Options'];
+          foreach ($optionData as $option) {
+              if ($option['id'] === $value) {
+                  // オプション名、価格格納
+                  $selectedOptionDetails[] = $option['name'] . " ({$option['price']}円)";
+              }
+          }
+      }
+  }
+  // カンマで区切る
+  $selectedOptionsSeparator = implode(", ", $selectedOptionDetails);
+    
+    fputcsv($file, array("",$fullname, $email, "\"$tel\"", $selectedOptionsSeparator));
+    
+    fclose($file);
+    
+    echo "CSV ファイルに書き込まれました。";
 
-} else {
-  echo "CSV ファイルを開けませんでした";
-}
+  } else {
+    echo "CSV ファイルを開けませんでした";
+  }
 
 ?>

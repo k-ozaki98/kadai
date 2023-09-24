@@ -7,9 +7,8 @@ $optionsData = json_decode($data, true);
 
 // 選択内容を取得
 if (isset($_SESSION['selected_options'])) {
-  $_SESSION['selected_options'] = $_POST;
-    $selectedOptions = $_SESSION['selected_options'];
-} 
+  $selectedOptions = $_SESSION['selected_options'];
+}
 
 require_once('../lib/function.php');
 
