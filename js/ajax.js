@@ -136,18 +136,6 @@ console.log('aa')
 
 });
 
-$.ajax({
-  url: "save_selection.php",
-  type: "POST",
-  data: {
-      selectedOptions: selectedOptions 
-  },
-  success: function(response) {
-      console.log('保存しました');
-  },
-  error: function(error) {
-      console.log('保存できませんでした');
-  }
-});
+
 
 
