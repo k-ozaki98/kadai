@@ -12,6 +12,8 @@ if (isset($_SESSION['selected_options'])) {
     $selectedOptions = $_SESSION['selected_options'];
 } 
 
+require_once('../lib/function.php');
+
 $fullname = $_POST['fullname'];
 $email = $_POST['email'];
 $tel = $_POST['tel'];
@@ -21,34 +23,42 @@ $csvFileName = "../order.csv";
 $file = fopen($csvFileName, 'a');
 
 if ($file) {
-    // 見出し
-    fputcsv($file, array("","氏名", "メールアドレス", "電話番号", "選択オプション"));
-    
     // 基本情報
+    fputcsv($file, array("","氏名", "メールアドレス", "電話番号", "選択オプション"));
+
+    // 基本情報をCSVファイルに書き込む
     fputcsv($file, array("", $fullname, $email, $tel));
 
-    // オプション名と価格
-    fputcsv($file, array("オプション名", "価格"));
 
-    // CSVファイルに選択オプションを書き込む
+    // 選択オプション名を格納する変数を初期化
+    $selectedOptionNames = array();
+
+    // オプション名と価格を格納する変数を初期化
+    $optionNamesAndPrices = array();
+
+    // CSVファイルに選択オプションと価格を書き込む
     foreach ($selectedOptions as $key => $value) {
-      if (isset($optionsData[$key . 'Options'])) {
-          $optionData = $optionsData[$key . 'Options'];
-          foreach ($optionData as $option) {
-              if ($option['id'] === $value) {
-                  $optionName = $option['name'];
-                  
-                  // オプション名をCSVファイルに書き込む
-                  fputcsv($file, array($optionName));
-              }
-          }
+        if (isset($optionsData[$key . 'Options'])) {
+            $optionData = $optionsData[$key . 'Options'];
+            foreach ($optionData as $option) {
+                if ($option['id'] === $value) {
+                    $selectedOptionNames[] = $option['name'];
+                    $optionNamesAndPrices[] = $option['name'] . " ({$option['price']}円)";
+                }
+            }
         }
     }
 
+// CSVファイルに選択オプション名を書き込む
+fputcsv($file, array("選択オプション名", implode(",", $selectedOptionNames)));
+
+// CSVファイルに選択オプションと価格を書き込む
+fputcsv($file, array("選択オプションと価格", implode(",", $optionNamesAndPrices)));
+
     fclose($file);
 
-    echo "csvファイルに書き込まれました。";
+    echo "CSV ファイルに書き込まれました。";
 } else {
-    echo "csvファイルをひらけませんでした";
+    echo "CSV ファイルを開けませんでした。";
 }
 ?>
