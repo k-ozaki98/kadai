@@ -4,11 +4,12 @@ session_start();
 $data = file_get_contents('../data.json');
 $optionsData = json_decode($data, true);
 // 選択内容保存
+$_SESSION['selected_options'] = $_POST;
 
 // 選択内容を取得
 if (isset($_SESSION['selected_options'])) {
-  $selectedOptions = $_SESSION['selected_options'];
-}
+    $selectedOptions = $_SESSION['selected_options'];
+} 
 
 require_once('../lib/function.php');
 
@@ -29,21 +30,22 @@ require_once('../lib/function.php');
         <h2 class="sec-ttl">基本情報</h2>
         <div class="basic-info">
           <label for="fullname">氏名</label>
-          <input type="text" id="fullname" name="fullname" required>
+          <input type="text" id="fullname" name="fullname" require>
         </div>
         <div class="basic-info">
           <label for="email">メールアドレス</label>
-          <input type="text" id="email" name="email" required>
+          <input type="text" id="email" name="email" require>
         </div>
         <div class="basic-info">
           <label for="tel">TEL</label>
-          <input type="tel" id="tel" name="tel" required>
+          <input type="tel" id="tel" name="tel" require>
         </div>
         <h2 class="sec-ttl">注文確認</h2>
 
         
         <?php
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
+          $selectedOptions = $_POST;
           confirmOptions($selectedOptions, $optionsData);
 
         }
@@ -52,11 +54,23 @@ require_once('../lib/function.php');
           <h3>合計金額:</h3>
           <p>
             <?php
-              if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                $selectedOptions = $_POST;
-                $totalPrice = calculateTotalPrice($selectedOptions, $optionsData);
-                $formattedTotalPrice = number_format($totalPrice);
-                echo $formattedTotalPrice . "円";
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+              // 合計金額の計算
+              $totalPrice = 0;
+      
+              foreach ($_POST as $key => $value) {
+                if (isset($optionsData[$key . 'Options'])) {
+                  $optionData = $optionsData[$key . 'Options'];
+                  foreach ($optionData as $option) {
+                    if ($option['id'] === $value) {
+                      $totalPrice += $option['price'];
+                    }
+                  }
+                }
+              }
+      
+              $formattedTotalPrice = number_format($totalPrice);
+              echo $formattedTotalPrice . "円";
             }
             ?>
           </p>
